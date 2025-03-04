@@ -1,24 +1,35 @@
-
 import React from "react";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Facebook, Twitter, Instagram, Linkedin, ArrowRight, Mail } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const handleLogoClick = (e) => {
+    e.preventDefault();
+    navigate("/");
+    window.scrollTo(0, 0);
+  };
+
   return (
     <footer className="bg-gray-50 pt-16 pb-8">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div className="lg:col-span-1">
-            <Link to="/" className="flex items-center space-x-2 mb-4">
+            <a 
+              href="/" 
+              className="flex items-center space-x-2 mb-4"
+              onClick={handleLogoClick}
+            >
               <img 
                 src="/lovable-uploads/7a259d38-8248-4be9-857d-6ed9c88e32e9.png" 
                 alt="Celsai Logo" 
                 className="h-12"
               />
-            </Link>
+            </a>
             <p className="text-gray-600 mb-4">
               Transformez votre service client avec l'intelligence artificielle qui comprend réellement vos clients.
             </p>

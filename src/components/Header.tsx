@@ -4,12 +4,13 @@ import { Container } from "@/components/ui/container";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Bot, BookOpen, Wrench, ArrowUpRight, BarChart3, Briefcase, Network, ChevronDown } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
+  const navigate = useNavigate();
   
   useEffect(() => {
     const handleScroll = () => {
@@ -72,6 +73,12 @@ const Header = () => {
     }
   };
 
+  const handleLogoClick = (e) => {
+    e.preventDefault();
+    navigate("/");
+    window.scrollTo(0, 0);
+  };
+
   // Close mega menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -95,13 +102,17 @@ const Header = () => {
     >
       <Container>
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center space-x-2">
+          <a 
+            href="/" 
+            className="flex items-center space-x-2"
+            onClick={handleLogoClick}
+          >
             <img 
               src="/lovable-uploads/7a259d38-8248-4be9-857d-6ed9c88e32e9.png" 
               alt="Celsai Logo" 
               className="h-10"
             />
-          </Link>
+          </a>
           
           <nav className="hidden md:flex items-center space-x-8 relative">
             <a
