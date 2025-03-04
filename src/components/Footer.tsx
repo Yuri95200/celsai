@@ -138,12 +138,12 @@ const Footer = () => {
               © 2023 Celsai. Tous droits réservés.
             </p>
             <div className="flex space-x-6">
-              <a href="#" className="text-gray-500 hover:text-celsai-500 text-sm">
+              <Link to="/terms" className="text-gray-500 hover:text-celsai-500 text-sm">
                 Conditions d'utilisation
-              </a>
-              <a href="#" className="text-gray-500 hover:text-celsai-500 text-sm">
+              </Link>
+              <Link to="/privacy" className="text-gray-500 hover:text-celsai-500 text-sm">
                 Politique de confidentialité
-              </a>
+              </Link>
               <a href="#" className="text-gray-500 hover:text-celsai-500 text-sm">
                 Mentions légales
               </a>
