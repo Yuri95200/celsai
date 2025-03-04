@@ -1,7 +1,8 @@
 
 import React from "react";
 import { Container } from "@/components/ui/container";
-import { Star, MessageSquare, Award, Users } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Star, MessageSquare, Award, Users, ArrowRight, BookOpen } from "lucide-react";
 
 const Testimonials = () => {
   const testimonials = [
@@ -70,6 +71,13 @@ const Testimonials = () => {
           ))}
         </div>
 
+        <div className="text-center mb-12">
+          <Button className="bg-blue-600 hover:bg-blue-700 text-white" size="lg">
+            <BookOpen className="mr-2 h-5 w-5" />
+            Lire nos études de cas
+          </Button>
+        </div>
+
         <div className="text-center mb-8">
           <h3 className="font-semibold text-lg mb-4">Ils nous font confiance</h3>
         </div>
@@ -91,6 +99,12 @@ const Testimonials = () => {
             <p className="text-blue-800 font-medium">
               Rejoignez plus de <span className="font-bold">500+</span> entreprises qui améliorent leur service client avec Celsai
             </p>
+          </div>
+          <div className="mt-8">
+            <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+              Commencer votre essai gratuit
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
           </div>
         </div>
       </Container>

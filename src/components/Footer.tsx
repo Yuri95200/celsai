@@ -2,7 +2,7 @@ import React from "react";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Facebook, Twitter, Instagram, Linkedin, ArrowRight } from "lucide-react";
+import { Facebook, Twitter, Instagram, Linkedin, ArrowRight, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -103,16 +103,30 @@ const Footer = () => {
             <p className="text-gray-600 mb-4">
               Abonnez-vous à notre newsletter pour recevoir nos dernières actualités et conseils en matière de service client.
             </p>
-            <div className="flex gap-2">
+            <div className="flex gap-2 mb-4">
               <Input
                 type="email"
                 placeholder="Votre email"
                 className="h-10"
               />
-              <Button className="bg-celsai-500 hover:bg-celsai-600 text-white h-10 w-10 p-0">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white h-10 w-10 p-0">
                 <ArrowRight size={18} />
               </Button>
             </div>
+            <Button variant="outline" className="border-gray-200 hover:border-blue-400 hover:bg-blue-50 w-full">
+              <Mail className="mr-2 h-4 w-4" />
+              S'inscrire à la newsletter
+            </Button>
+          </div>
+        </div>
+        
+        <div className="py-8 border-t border-b border-gray-200 mb-8">
+          <div className="text-center">
+            <h3 className="font-semibold text-lg mb-4">Prêt à révolutionner votre support client ?</h3>
+            <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+              Commencer votre essai gratuit
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
           </div>
         </div>
         

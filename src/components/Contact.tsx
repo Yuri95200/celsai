@@ -2,7 +2,8 @@
 import React from "react";
 import { Container } from "@/components/ui/container";
 import ContactForm from "./ContactForm";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, Calendar, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Contact = () => {
   return (
@@ -20,6 +21,16 @@ const Contact = () => {
               <p className="mt-4 text-lg text-gray-600">
                 Contactez-nous pour discuter de vos besoins spécifiques et découvrir comment Celsai peut aider votre entreprise à offrir un support client exceptionnel.
               </p>
+              <div className="mt-6 flex flex-col sm:flex-row gap-4">
+                <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+                  Réserver une démo personnalisée
+                  <Calendar className="ml-2 h-5 w-5" />
+                </Button>
+                <Button variant="outline" className="border-gray-200 hover:border-blue-400 hover:bg-blue-50">
+                  Consulter nos ressources
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </div>
             </div>
             
             <div className="bg-gray-50 rounded-lg p-6 space-y-6">

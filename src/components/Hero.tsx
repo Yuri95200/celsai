@@ -2,7 +2,7 @@
 import React from "react";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, PlayCircle } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -26,6 +26,7 @@ const Hero = () => {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
                 <Button variant="outline" className="border-gray-200 hover:border-blue-400 hover:bg-blue-50 text-lg py-6 px-8">
+                  <PlayCircle className="mr-2 h-5 w-5" />
                   Voir la démo
                 </Button>
               </div>
