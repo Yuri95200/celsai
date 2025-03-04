@@ -3,6 +3,7 @@ import React from "react";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { Star, MessageSquare, Award, Users, ArrowRight, BookOpen } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Testimonials = () => {
   const testimonials = [
@@ -64,10 +65,12 @@ const Testimonials = () => {
         </div>
 
         <div className="text-center mb-12">
-          <Button className="bg-blue-600 hover:bg-blue-700 text-white" size="lg">
-            <BookOpen className="mr-2 h-5 w-5" />
-            Lire nos études de cas
-          </Button>
+          <Link to="/case-studies">
+            <Button className="bg-blue-600 hover:bg-blue-700 text-white" size="lg">
+              <BookOpen className="mr-2 h-5 w-5" />
+              Lire nos études de cas
+            </Button>
+          </Link>
         </div>
 
         <div className="mt-16 text-center">

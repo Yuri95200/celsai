@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/container";
 import ContactForm from "./ContactForm";
 import { Mail, MapPin, Phone, Calendar, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   return (
@@ -26,10 +27,12 @@ const Contact = () => {
                   Réserver une démo personnalisée
                   <Calendar className="ml-2 h-5 w-5" />
                 </Button>
-                <Button variant="outline" className="border-gray-200 hover:border-blue-400 hover:bg-blue-50">
-                  Consulter nos ressources
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
+                <Link to="/resources">
+                  <Button variant="outline" className="border-gray-200 hover:border-blue-400 hover:bg-blue-50">
+                    Consulter nos ressources
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
               </div>
             </div>
             
