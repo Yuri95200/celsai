@@ -1,14 +1,19 @@
-
 import React, { useState } from "react";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
-import { Check, HelpCircle } from "lucide-react";
+import { Check, HelpCircle, ChevronDown } from "lucide-react";
 import { 
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger
+} from "@/components/ui/accordion";
 
 const pricingPlans = [
   {
@@ -58,6 +63,30 @@ const pricingPlans = [
     ],
     recommended: false,
     color: "bg-white"
+  }
+];
+
+const faqItems = [
+  {
+    question: "Puis-je changer de forfait à tout moment ?",
+    answer: "Oui, vous pouvez mettre à niveau ou rétrograder votre forfait à tout moment. Les changements prendront effet immédiatement.",
+    hasTooltip: true,
+    tooltipContent: "Vous pouvez changer de forfait à tout moment, le montant sera ajusté au prorata."
+  },
+  {
+    question: "Qu'est-ce qu'une conversation ?",
+    answer: "Une conversation est définie comme un échange complet entre un utilisateur et le chatbot, qui peut comprendre plusieurs messages.",
+    hasTooltip: false
+  },
+  {
+    question: "Comment fonctionne l'essai gratuit ?",
+    answer: "Vous bénéficiez d'un accès complet à toutes les fonctionnalités pendant 14 jours, sans engagement et sans carte bancaire.",
+    hasTooltip: false
+  },
+  {
+    question: "Quels sont les canaux d'intégration disponibles ?",
+    answer: "Site web, applications mobiles, Facebook Messenger, WhatsApp, Instagram, Twitter, et plus selon votre forfait.",
+    hasTooltip: false
   }
 ];
 
@@ -162,50 +191,31 @@ const Pricing = () => {
           
           <div id="pricing-faq" className="mt-8 pt-8 border-t border-gray-200">
             <h4 className="text-lg font-medium mb-4">Questions fréquentes</h4>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h5 className="font-medium flex items-center gap-2">
-                  Puis-je changer de forfait à tout moment ?
-                  <TooltipProvider>
-                    <Tooltip>
-                      <TooltipTrigger>
-                        <HelpCircle className="h-4 w-4 text-gray-400" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p className="max-w-xs">Vous pouvez changer de forfait à tout moment, le montant sera ajusté au prorata.</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </h5>
-                <p className="text-gray-600 text-sm mt-1">
-                  Oui, vous pouvez mettre à niveau ou rétrograder votre forfait à tout moment. Les changements prendront effet immédiatement.
-                </p>
-              </div>
-              <div>
-                <h5 className="font-medium flex items-center gap-2">
-                  Qu'est-ce qu'une conversation ?
-                </h5>
-                <p className="text-gray-600 text-sm mt-1">
-                  Une conversation est définie comme un échange complet entre un utilisateur et le chatbot, qui peut comprendre plusieurs messages.
-                </p>
-              </div>
-              <div>
-                <h5 className="font-medium flex items-center gap-2">
-                  Comment fonctionne l'essai gratuit ?
-                </h5>
-                <p className="text-gray-600 text-sm mt-1">
-                  Vous bénéficiez d'un accès complet à toutes les fonctionnalités pendant 14 jours, sans engagement et sans carte bancaire.
-                </p>
-              </div>
-              <div>
-                <h5 className="font-medium flex items-center gap-2">
-                  Quels sont les canaux d'intégration disponibles ?
-                </h5>
-                <p className="text-gray-600 text-sm mt-1">
-                  Site web, applications mobiles, Facebook Messenger, WhatsApp, Instagram, Twitter, et plus selon votre forfait.
-                </p>
-              </div>
-            </div>
+            
+            <Accordion type="single" collapsible className="w-full">
+              {faqItems.map((faq, index) => (
+                <AccordionItem key={index} value={`faq-${index}`}>
+                  <AccordionTrigger className="text-left font-medium flex items-center">
+                    {faq.question}
+                    {faq.hasTooltip && (
+                      <TooltipProvider>
+                        <Tooltip>
+                          <TooltipTrigger className="ml-2">
+                            <HelpCircle className="h-4 w-4 text-gray-400" />
+                          </TooltipTrigger>
+                          <TooltipContent>
+                            <p className="max-w-xs">{faq.tooltipContent}</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
+                    )}
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <p className="text-gray-600">{faq.answer}</p>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
         </div>
       </Container>
