@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
@@ -29,14 +30,6 @@ const Testimonials = () => {
       company: "TechVision",
       icon: <Award className="h-10 w-10 text-purple-500" />
     }
-  ];
-
-  const companyLogos = [
-    { id: 1, name: "TechCorp", classes: "bg-gray-200" },
-    { id: 2, name: "InnoSoft", classes: "bg-gray-300" },
-    { id: 3, name: "DataFlow", classes: "bg-gray-200" },
-    { id: 4, name: "CloudServe", classes: "bg-gray-300" },
-    { id: 5, name: "SmartSys", classes: "bg-gray-200" }
   ];
 
   return (
@@ -75,17 +68,6 @@ const Testimonials = () => {
             <BookOpen className="mr-2 h-5 w-5" />
             Lire nos études de cas
           </Button>
-        </div>
-
-        <div className="flex flex-wrap justify-center items-center gap-8">
-          {companyLogos.map((logo) => (
-            <div 
-              key={logo.id} 
-              className={`${logo.classes} h-16 w-32 rounded-md flex items-center justify-center`}
-            >
-              <span className="font-semibold text-gray-700">{logo.name}</span>
-            </div>
-          ))}
         </div>
 
         <div className="mt-16 text-center">
