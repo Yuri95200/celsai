@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
@@ -76,10 +75,6 @@ const Testimonials = () => {
             <BookOpen className="mr-2 h-5 w-5" />
             Lire nos études de cas
           </Button>
-        </div>
-
-        <div className="text-center mb-8">
-          <h3 className="font-semibold text-lg mb-4">Ils nous font confiance</h3>
         </div>
 
         <div className="flex flex-wrap justify-center items-center gap-8">
