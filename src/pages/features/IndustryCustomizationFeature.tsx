@@ -42,7 +42,7 @@ const IndustryCustomizationFeature = () => {
     >
       <section className="py-16">
         <Container>
-          <div className="max-w-3xl mx-auto mb-16">
+          <div className="max-w-3xl mx-auto mb-16 text-left">
             <h2 className="text-3xl font-bold mb-6">Une IA qui parle le langage de votre industrie</h2>
             <p className="text-lg text-gray-600 mb-4">
               Chaque secteur a son vocabulaire, ses processus et ses défis spécifiques. Notre plateforme
@@ -62,15 +62,15 @@ const IndustryCustomizationFeature = () => {
                 <div className="h-12 w-12 bg-celsai-50 rounded-lg flex items-center justify-center mb-5">
                   <industry.icon className="h-6 w-6 text-celsai-500" />
                 </div>
-                <h3 className="text-xl font-medium mb-3">{industry.name}</h3>
-                <p className="text-gray-600">{industry.description}</p>
+                <h3 className="text-xl font-medium mb-3 text-left">{industry.name}</h3>
+                <p className="text-gray-600 text-left">{industry.description}</p>
               </div>
             ))}
           </div>
           
           <div className="bg-gradient-to-r from-celsai-50 to-blue-50 rounded-xl p-8 mb-16">
             <div className="flex flex-col md:flex-row gap-8">
-              <div className="md:w-1/2">
+              <div className="md:w-1/2 text-left">
                 <h3 className="text-2xl font-bold mb-4">Personnalisation de la marque</h3>
                 <p className="text-gray-700 mb-4">
                   Au-delà de l'adaptation à votre secteur, nous façonnons l'IA pour qu'elle communique
@@ -95,7 +95,7 @@ const IndustryCustomizationFeature = () => {
                   </li>
                 </ul>
               </div>
-              <div className="md:w-1/2 bg-white rounded-lg p-5 shadow-sm">
+              <div className="md:w-1/2 bg-white rounded-lg p-5 shadow-sm text-left">
                 <h4 className="font-medium mb-3">Exemple de personnalisation</h4>
                 <div className="space-y-4">
                   <div className="border-l-4 border-gray-300 pl-4 py-2">
@@ -118,13 +118,13 @@ const IndustryCustomizationFeature = () => {
           </div>
           
           <div className="bg-white rounded-xl p-8 border border-gray-100 shadow-sm">
-            <h3 className="text-2xl font-bold mb-6">Processus de personnalisation</h3>
+            <h3 className="text-2xl font-bold mb-6 text-left">Processus de personnalisation</h3>
             <div className="space-y-6">
               <div className="flex items-start gap-4">
                 <div className="h-8 w-8 rounded-full bg-celsai-500 text-white flex items-center justify-center flex-shrink-0">
                   1
                 </div>
-                <div>
+                <div className="text-left">
                   <h4 className="font-medium text-lg mb-1">Analyse de votre communication</h4>
                   <p className="text-gray-600">
                     Nous analysons vos communications existantes, votre charte éditoriale et votre
@@ -137,7 +137,7 @@ const IndustryCustomizationFeature = () => {
                 <div className="h-8 w-8 rounded-full bg-celsai-500 text-white flex items-center justify-center flex-shrink-0">
                   2
                 </div>
-                <div>
+                <div className="text-left">
                   <h4 className="font-medium text-lg mb-1">Configuration du modèle</h4>
                   <p className="text-gray-600">
                     Nous configurons le modèle IA avec vos spécificités sectorielles et votre style de communication.
@@ -149,7 +149,7 @@ const IndustryCustomizationFeature = () => {
                 <div className="h-8 w-8 rounded-full bg-celsai-500 text-white flex items-center justify-center flex-shrink-0">
                   3
                 </div>
-                <div>
+                <div className="text-left">
                   <h4 className="font-medium text-lg mb-1">Phase de test et ajustement</h4>
                   <p className="text-gray-600">
                     Nous effectuons des tests approfondis et affinons les réponses jusqu'à obtenir le résultat parfait.
@@ -161,7 +161,7 @@ const IndustryCustomizationFeature = () => {
                 <div className="h-8 w-8 rounded-full bg-celsai-500 text-white flex items-center justify-center flex-shrink-0">
                   4
                 </div>
-                <div>
+                <div className="text-left">
                   <h4 className="font-medium text-lg mb-1">Déploiement et amélioration continue</h4>
                   <p className="text-gray-600">
                     Nous déployons la solution et continuons à l'améliorer au fil du temps en fonction des retours.

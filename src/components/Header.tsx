@@ -10,6 +10,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
+  const [isMobileFeaturesOpen, setIsMobileFeaturesOpen] = useState(false);
   const navigate = useNavigate();
   
   useEffect(() => {
@@ -77,6 +78,11 @@ const Header = () => {
     e.preventDefault();
     navigate("/");
     window.scrollTo(0, 0);
+  };
+
+  const toggleMobileFeatures = (e) => {
+    e.preventDefault();
+    setIsMobileFeaturesOpen(!isMobileFeaturesOpen);
   };
 
   // Close mega menu when clicking outside
@@ -183,27 +189,32 @@ const Header = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg rounded-b-xl animate-fade-in-up">
             <div className="px-4 py-6 space-y-4">
-              {/* Mobile Features submenu */}
+              {/* Mobile Features dropdown */}
               <div className="space-y-2">
                 <a 
-                  href="#features" 
-                  className="block py-2 text-gray-800 font-medium"
+                  href="#" 
+                  className="flex items-center justify-between py-2 text-gray-800 font-medium"
+                  onClick={toggleMobileFeatures}
                 >
-                  Fonctionnalités
+                  <span>Fonctionnalités</span>
+                  <ChevronDown className={`h-4 w-4 transition-transform ${isMobileFeaturesOpen ? 'rotate-180' : ''}`} />
                 </a>
-                <div className="pl-4 space-y-2">
-                  {features.map((feature, index) => (
-                    <Link
-                      key={index}
-                      to={feature.path}
-                      className="flex items-center py-2 text-gray-600 hover:text-celsai-500"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      <feature.icon className="h-4 w-4 mr-2" />
-                      {feature.title}
-                    </Link>
-                  ))}
-                </div>
+                
+                {isMobileFeaturesOpen && (
+                  <div className="pl-4 space-y-2 animate-fade-in-down">
+                    {features.map((feature, index) => (
+                      <Link
+                        key={index}
+                        to={feature.path}
+                        className="flex items-center py-2 text-gray-600 hover:text-celsai-500"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        <feature.icon className="h-4 w-4 mr-2" />
+                        {feature.title}
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
               
               <a 

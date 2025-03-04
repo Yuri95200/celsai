@@ -25,7 +25,7 @@ const FeatureLayout = ({ icon: Icon, title, description, imageSrc, children }: F
         <section className="py-16 bg-gradient-to-b from-white to-gray-50">
           <Container>
             <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
-              <div className="md:w-1/2 space-y-6">
+              <div className="md:w-1/2 space-y-6 text-left">
                 <div className="inline-flex items-center">
                   <Link to="/" className="text-gray-500 hover:text-gray-700">Accueil</Link>
                   <ChevronRight className="h-4 w-4 mx-2 text-gray-400" />
