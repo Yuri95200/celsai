@@ -1,8 +1,10 @@
+
 import React, { useState, useEffect } from "react";
 import { Container } from "@/components/ui/container";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,13 +28,13 @@ const Header = () => {
     >
       <Container>
         <div className="flex items-center justify-between">
-          <a href="#" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <img 
               src="/lovable-uploads/7a259d38-8248-4be9-857d-6ed9c88e32e9.png" 
               alt="Celsai Logo" 
               className="h-10"
             />
-          </a>
+          </Link>
           
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#features" className="text-gray-600 hover:text-celsai-500 transition-colors">
@@ -47,6 +49,9 @@ const Header = () => {
             <a href="#pricing" className="text-gray-600 hover:text-celsai-500 transition-colors">
               Tarifs
             </a>
+            <Link to="/about" className="text-gray-600 hover:text-celsai-500 transition-colors">
+              À propos
+            </Link>
             <a href="#contact" className="text-gray-600 hover:text-celsai-500 transition-colors">
               Contact
             </a>
@@ -101,6 +106,13 @@ const Header = () => {
               >
                 Tarifs
               </a>
+              <Link 
+                to="/about" 
+                className="block py-2 text-gray-600 hover:text-celsai-500"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                À propos
+              </Link>
               <a 
                 href="#contact" 
                 className="block py-2 text-gray-600 hover:text-celsai-500"

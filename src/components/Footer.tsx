@@ -1,8 +1,10 @@
+
 import React from "react";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Facebook, Twitter, Instagram, Linkedin, ArrowRight, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -10,13 +12,13 @@ const Footer = () => {
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div className="lg:col-span-1">
-            <a href="#" className="flex items-center space-x-2 mb-4">
+            <Link to="/" className="flex items-center space-x-2 mb-4">
               <img 
                 src="/lovable-uploads/7a259d38-8248-4be9-857d-6ed9c88e32e9.png" 
                 alt="Celsai Logo" 
                 className="h-12"
               />
-            </a>
+            </Link>
             <p className="text-gray-600 mb-4">
               Transformez votre service client avec l'intelligence artificielle qui comprend réellement vos clients.
             </p>
@@ -71,9 +73,9 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Entreprise</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-600 hover:text-celsai-500 transition-colors">
+                <Link to="/about" className="text-gray-600 hover:text-celsai-500 transition-colors">
                   À propos
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#" className="text-gray-600 hover:text-celsai-500 transition-colors">
