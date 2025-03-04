@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -117,7 +116,7 @@
   }
   
   .text-gradient {
-    @apply bg-gradient-to-r from-celsai-500 to-celsai-700 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent;
   }
   
   .card-hover {
@@ -125,7 +124,7 @@
   }
   
   .focus-ring {
-    @apply ring-2 ring-offset-2 ring-celsai-500 ring-offset-white outline-none;
+    @apply ring-2 ring-offset-2 ring-blue-500 ring-offset-white outline-none;
   }
 }
 

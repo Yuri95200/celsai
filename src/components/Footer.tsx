@@ -12,10 +12,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div className="lg:col-span-1">
             <a href="#" className="flex items-center space-x-2 mb-4">
-              <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-celsai-400 to-celsai-600 flex items-center justify-center shadow-md">
-                <span className="text-white font-bold text-xl">C</span>
-              </div>
-              <span className="text-2xl font-medium text-gray-900">Celsai</span>
+              <img 
+                src="/lovable-uploads/7a259d38-8248-4be9-857d-6ed9c88e32e9.png" 
+                alt="Celsai Logo" 
+                className="h-12"
+              />
             </a>
             <p className="text-gray-600 mb-4">
               Transformez votre service client avec l'intelligence artificielle qui comprend réellement vos clients.

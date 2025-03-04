@@ -28,10 +28,11 @@ const Header = () => {
       <Container>
         <div className="flex items-center justify-between">
           <a href="#" className="flex items-center space-x-2">
-            <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-celsai-400 to-celsai-600 flex items-center justify-center shadow-md">
-              <span className="text-white font-bold text-xl">C</span>
-            </div>
-            <span className="text-2xl font-medium text-gray-900">Celsai</span>
+            <img 
+              src="/lovable-uploads/7a259d38-8248-4be9-857d-6ed9c88e32e9.png" 
+              alt="Celsai Logo" 
+              className="h-10"
+            />
           </a>
           
           <nav className="hidden md:flex items-center space-x-8">
