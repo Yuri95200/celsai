@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Container } from "@/components/ui/container";
 import { cn } from "@/lib/utils";
@@ -85,7 +84,6 @@ const Header = () => {
     setIsMobileFeaturesOpen(!isMobileFeaturesOpen);
   };
 
-  // Close mega menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (isMegaMenuOpen && !event.target.closest('.mega-menu-container')) {
@@ -130,7 +128,6 @@ const Header = () => {
               <ChevronDown className={`h-4 w-4 transition-transform ${isMegaMenuOpen ? 'rotate-180' : ''}`} />
             </a>
 
-            {/* Mega Menu */}
             {isMegaMenuOpen && (
               <div className="absolute top-full left-0 mt-2 w-[700px] bg-white rounded-xl shadow-lg z-50 mega-menu-container animate-fade-in-up">
                 <div className="p-6 grid grid-cols-2 gap-6">
@@ -185,15 +182,13 @@ const Header = () => {
           </button>
         </div>
         
-        {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg rounded-b-xl animate-fade-in-up">
             <div className="px-4 py-6 space-y-4">
-              {/* Mobile Features dropdown */}
               <div className="space-y-2">
                 <a 
                   href="#" 
-                  className="flex items-center justify-between py-2 text-gray-800 font-medium"
+                  className="flex items-center justify-between py-2 text-gray-600 hover:text-celsai-500"
                   onClick={toggleMobileFeatures}
                 >
                   <span>Fonctionnalités</span>
