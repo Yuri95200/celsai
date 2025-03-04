@@ -49,9 +49,6 @@ const Header = () => {
             <a href="#pricing" className="text-gray-600 hover:text-celsai-500 transition-colors">
               Tarifs
             </a>
-            <Link to="/about" className="text-gray-600 hover:text-celsai-500 transition-colors">
-              À propos
-            </Link>
             <a href="#contact" className="text-gray-600 hover:text-celsai-500 transition-colors">
               Contact
             </a>
@@ -106,13 +103,6 @@ const Header = () => {
               >
                 Tarifs
               </a>
-              <Link 
-                to="/about" 
-                className="block py-2 text-gray-600 hover:text-celsai-500"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                À propos
-              </Link>
               <a 
                 href="#contact" 
                 className="block py-2 text-gray-600 hover:text-celsai-500"

@@ -160,7 +160,7 @@ const Pricing = () => {
             </Button>
           </div>
           
-          <div className="mt-8 pt-8 border-t border-gray-200">
+          <div id="pricing-faq" className="mt-8 pt-8 border-t border-gray-200">
             <h4 className="text-lg font-medium mb-4">Questions fréquentes</h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
