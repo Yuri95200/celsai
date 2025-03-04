@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Container } from "@/components/ui/container";
 import { cn } from "@/lib/utils";
@@ -42,6 +41,9 @@ const Header = () => {
             <a href="#demo" className="text-gray-600 hover:text-celsai-500 transition-colors">
               Démo
             </a>
+            <a href="#testimonials" className="text-gray-600 hover:text-celsai-500 transition-colors">
+              Témoignages
+            </a>
             <a href="#pricing" className="text-gray-600 hover:text-celsai-500 transition-colors">
               Tarifs
             </a>
@@ -84,6 +86,13 @@ const Header = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Démo
+              </a>
+              <a 
+                href="#testimonials" 
+                className="block py-2 text-gray-600 hover:text-celsai-500"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Témoignages
               </a>
               <a 
                 href="#pricing" 
