@@ -3,12 +3,13 @@ import React, { useState, useEffect } from "react";
 import { Container } from "@/components/ui/container";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Bot, BookOpen, Wrench, ArrowUpRight, BarChart3, Briefcase, Network, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
   
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +19,72 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const features = [
+    {
+      icon: Bot,
+      title: "Chatbot intelligent",
+      description: "Intégrez votre support client sur tous vos canaux",
+      path: "/features/chatbot"
+    },
+    {
+      icon: BookOpen,
+      title: "Base de connaissances",
+      description: "Analyse automatique de votre documentation existante",
+      path: "/features/knowledge-base"
+    },
+    {
+      icon: Wrench,
+      title: "Résolution automatisée",
+      description: "Diagnostic préliminaire des problèmes techniques",
+      path: "/features/automated-resolution"
+    },
+    {
+      icon: ArrowUpRight,
+      title: "Escalade intelligente",
+      description: "Détection des cas complexes nécessitant intervention humaine",
+      path: "/features/smart-escalation"
+    },
+    {
+      icon: BarChart3,
+      title: "Analyses et tableaux de bord",
+      description: "Suivi des problèmes fréquents et mesure des résultats",
+      path: "/features/analytics"
+    },
+    {
+      icon: Briefcase,
+      title: "Personnalisation par secteur",
+      description: "Modèles pré-entraînés pour différents secteurs d'activité",
+      path: "/features/industry-customization"
+    },
+    {
+      icon: Network,
+      title: "Intégration avec vos outils",
+      description: "Connexion aux principaux CRM et plateformes externes",
+      path: "/features/integrations"
+    }
+  ];
+
+  const handleFeaturesClick = (e) => {
+    if (window.innerWidth >= 768) {
+      e.preventDefault();
+      setIsMegaMenuOpen(!isMegaMenuOpen);
+    }
+  };
+
+  // Close mega menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isMegaMenuOpen && !event.target.closest('.mega-menu-container')) {
+        setIsMegaMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isMegaMenuOpen]);
 
   return (
     <header 
@@ -36,10 +103,40 @@ const Header = () => {
             />
           </Link>
           
-          <nav className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="text-gray-600 hover:text-celsai-500 transition-colors">
+          <nav className="hidden md:flex items-center space-x-8 relative">
+            <a
+              href="#features"
+              className="text-gray-600 hover:text-celsai-500 transition-colors flex items-center gap-1 group"
+              onClick={handleFeaturesClick}
+            >
               Fonctionnalités
+              <ChevronDown className={`h-4 w-4 transition-transform ${isMegaMenuOpen ? 'rotate-180' : ''}`} />
             </a>
+
+            {/* Mega Menu */}
+            {isMegaMenuOpen && (
+              <div className="absolute top-full left-0 mt-2 w-[700px] bg-white rounded-xl shadow-lg z-50 mega-menu-container animate-fade-in-up">
+                <div className="p-6 grid grid-cols-2 gap-6">
+                  {features.map((feature, index) => (
+                    <Link 
+                      key={index} 
+                      to={feature.path}
+                      className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
+                      onClick={() => setIsMegaMenuOpen(false)}
+                    >
+                      <div className="h-10 w-10 bg-celsai-50 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-celsai-100 transition-colors">
+                        <feature.icon className="h-5 w-5 text-celsai-500" />
+                      </div>
+                      <div>
+                        <h3 className="font-medium text-gray-900">{feature.title}</h3>
+                        <p className="text-sm text-gray-600">{feature.description}</p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+
             <a href="#demo" className="text-gray-600 hover:text-celsai-500 transition-colors">
               Démo
             </a>
@@ -75,13 +172,29 @@ const Header = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg rounded-b-xl animate-fade-in-up">
             <div className="px-4 py-6 space-y-4">
-              <a 
-                href="#features" 
-                className="block py-2 text-gray-600 hover:text-celsai-500"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Fonctionnalités
-              </a>
+              {/* Mobile Features submenu */}
+              <div className="space-y-2">
+                <a 
+                  href="#features" 
+                  className="block py-2 text-gray-800 font-medium"
+                >
+                  Fonctionnalités
+                </a>
+                <div className="pl-4 space-y-2">
+                  {features.map((feature, index) => (
+                    <Link
+                      key={index}
+                      to={feature.path}
+                      className="flex items-center py-2 text-gray-600 hover:text-celsai-500"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      <feature.icon className="h-4 w-4 mr-2" />
+                      {feature.title}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+              
               <a 
                 href="#demo" 
                 className="block py-2 text-gray-600 hover:text-celsai-500"

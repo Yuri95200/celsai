@@ -10,6 +10,15 @@ import Resources from "./pages/Resources";
 import ScrollToTop from "./components/ScrollToTop";
 import "./App.css";
 
+// Feature pages
+import ChatbotFeature from "./pages/features/ChatbotFeature";
+import KnowledgeBaseFeature from "./pages/features/KnowledgeBaseFeature";
+import AutomatedResolutionFeature from "./pages/features/AutomatedResolutionFeature";
+import SmartEscalationFeature from "./pages/features/SmartEscalationFeature";
+import AnalyticsFeature from "./pages/features/AnalyticsFeature";
+import IndustryCustomizationFeature from "./pages/features/IndustryCustomizationFeature";
+import IntegrationsFeature from "./pages/features/IntegrationsFeature";
+
 function App() {
   return (
     <Router>
@@ -21,6 +30,16 @@ function App() {
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/case-studies" element={<CaseStudies />} />
         <Route path="/resources" element={<Resources />} />
+        
+        {/* Feature routes */}
+        <Route path="/features/chatbot" element={<ChatbotFeature />} />
+        <Route path="/features/knowledge-base" element={<KnowledgeBaseFeature />} />
+        <Route path="/features/automated-resolution" element={<AutomatedResolutionFeature />} />
+        <Route path="/features/smart-escalation" element={<SmartEscalationFeature />} />
+        <Route path="/features/analytics" element={<AnalyticsFeature />} />
+        <Route path="/features/industry-customization" element={<IndustryCustomizationFeature />} />
+        <Route path="/features/integrations" element={<IntegrationsFeature />} />
+        
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
