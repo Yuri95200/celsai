@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { Container } from "@/components/ui/container";
 import { cn } from "@/lib/utils";
@@ -184,15 +185,17 @@ const Header = () => {
         
         {isMobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg rounded-b-xl animate-fade-in-up">
-            <div className="px-4 py-6 space-y-4">
-              <div className="space-y-2">
+            <div className="px-4 py-6 flex flex-col space-y-4">
+              <div className="w-full">
                 <a 
                   href="#" 
-                  className="flex items-center justify-between py-2 text-gray-600 hover:text-celsai-500"
+                  className="block w-full text-gray-600 hover:text-celsai-500 py-2"
                   onClick={toggleMobileFeatures}
                 >
-                  <span>Fonctionnalités</span>
-                  <ChevronDown className={`h-4 w-4 transition-transform ${isMobileFeaturesOpen ? 'rotate-180' : ''}`} />
+                  <div className="flex items-center justify-between">
+                    <span>Fonctionnalités</span>
+                    <ChevronDown className={`h-4 w-4 transition-transform ${isMobileFeaturesOpen ? 'rotate-180' : ''}`} />
+                  </div>
                 </a>
                 
                 {isMobileFeaturesOpen && (
