@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Container } from "@/components/ui/container";
 import { cn } from "@/lib/utils";
@@ -67,6 +66,14 @@ const Header = () => {
     }
   ];
 
+  const handleFeatureClick = (e) => {
+    if (window.innerWidth >= 768) {
+      e.preventDefault();
+      navigate("/features");
+      window.scrollTo(0, 0);
+    }
+  };
+
   const handleFeaturesClick = (e) => {
     if (window.innerWidth >= 768) {
       e.preventDefault();
@@ -79,6 +86,7 @@ const Header = () => {
     navigate("/features");
     setIsMegaMenuOpen(false);
     setIsMobileMenuOpen(false);
+    window.scrollTo(0, 0);
   };
 
   const handleLogoClick = (e) => {
@@ -128,13 +136,13 @@ const Header = () => {
           
           <nav className="hidden md:flex items-center space-x-8 relative">
             <div className="relative">
-              <a
-                href="/features"
+              <Link
+                to="/features"
                 className="text-gray-600 hover:text-celsai-500 transition-colors"
-                onClick={navigateToFeatures}
+                onClick={handleFeatureClick}
               >
                 Fonctionnalités
-              </a>
+              </Link>
               <button
                 className="ml-1 text-gray-600 hover:text-celsai-500 transition-colors inline-flex items-center"
                 onClick={handleFeaturesClick}
@@ -166,18 +174,9 @@ const Header = () => {
               )}
             </div>
 
-            <a href="#demo" className="text-gray-600 hover:text-celsai-500 transition-colors">
-              Démo
-            </a>
-            <a href="#testimonials" className="text-gray-600 hover:text-celsai-500 transition-colors">
-              Témoignages
-            </a>
-            <a href="#pricing" className="text-gray-600 hover:text-celsai-500 transition-colors">
-              Tarifs
-            </a>
-            <a href="#contact" className="text-gray-600 hover:text-celsai-500 transition-colors">
+            <Link to="/contact" className="text-gray-600 hover:text-celsai-500 transition-colors">
               Contact
-            </a>
+            </Link>
           </nav>
           
           <div className="hidden md:flex items-center space-x-4">
@@ -242,44 +241,13 @@ const Header = () => {
                 )}
               </div>
               
-              <a 
-                href="#demo" 
-                className="block py-2 text-gray-600 hover:text-celsai-500"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Démo
-              </a>
-              <a 
-                href="#testimonials" 
-                className="block py-2 text-gray-600 hover:text-celsai-500"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Témoignages
-              </a>
-              <a 
-                href="#pricing" 
-                className="block py-2 text-gray-600 hover:text-celsai-500"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Tarifs
-              </a>
-              <a 
-                href="#contact" 
+              <Link 
+                to="/contact" 
                 className="block py-2 text-gray-600 hover:text-celsai-500"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact
-              </a>
-              <div className="pt-4 space-y-3">
-                <Button variant="outline" className="w-full border-gray-200">
-                  Se connecter
-                </Button>
-                <a href="https://celsai.com/demo">
-                  <Button className="w-full bg-celsai-500 hover:bg-celsai-600 text-white">
-                    Essai gratuit
-                  </Button>
-                </a>
-              </div>
+              </Link>
             </div>
           </div>
         )}
