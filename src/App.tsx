@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import CaseStudies from "./pages/CaseStudies";
 import Resources from "./pages/Resources";
 import ScrollToTop from "./components/ScrollToTop";
+import DecorativeMotifs from "./components/DecorativeMotifs";
 import "./App.css";
 
 // Feature pages
@@ -23,6 +24,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
+      <DecorativeMotifs />
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/about" element={<About />} />

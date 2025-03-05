@@ -1,3 +1,4 @@
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -40,3 +41,82 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Animation for decorative elements */
+@keyframes pulse {
+  0% { opacity: 0.5; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.5; }
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.ai-motif {
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.star-motif {
+  background: radial-gradient(circle at center, rgba(122, 200, 251, 0.8) 0%, rgba(122, 200, 251, 0) 70%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  animation: pulse 4s infinite ease-in-out;
+}
+
+.node-motif {
+  background: radial-gradient(circle at center, rgba(16, 143, 231, 0.6) 0%, rgba(16, 143, 231, 0) 70%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  animation: pulse 3s infinite ease-in-out;
+}
+
+.circuit-motif {
+  border: 1px solid rgba(7, 42, 77, 0.3);
+  width: 100px;
+  height: 50px;
+  border-radius: 30px;
+  animation: floatUp 8s infinite ease-in-out;
+}
+
+.geometric-motif {
+  border: 1px solid rgba(10, 62, 110, 0.4);
+  width: 40px;
+  height: 40px;
+  animation: rotate 20s infinite linear;
+}
+
+.triangle-motif {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.square-motif {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.hexagon-motif {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+/* Enhanced content sections */
+.glass-effect {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.section-with-motifs {
+  position: relative;
+  overflow: hidden;
+}
+
