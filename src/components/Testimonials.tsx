@@ -37,6 +37,7 @@ const Testimonials = () => {
     <section id="testimonials" className="py-20 bg-gray-50">
       <Container>
         <div className="text-center mb-16">
+          <h3 className="text-2xl font-semibold text-purple-600 mb-2">Témoignages</h3>
           <h2 className="text-3xl font-bold mb-4">Ce que nos clients disent</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Découvrez comment Celsai transforme le service client de nombreuses entreprises à travers différents secteurs.
@@ -65,12 +66,27 @@ const Testimonials = () => {
         </div>
 
         <div className="text-center mb-12">
-          <Link to="/case-studies">
+          <Link to="https://celsai.com/demo">
             <Button className="bg-blue-600 hover:bg-blue-700 text-white" size="lg">
               <BookOpen className="mr-2 h-5 w-5" />
-              Lire nos études de cas
+              Découvrir nos études de cas
             </Button>
           </Link>
+        </div>
+
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 bg-white p-8 rounded-xl shadow-md mb-16">
+          <div className="flex-1 text-center md:text-left">
+            <h3 className="text-xl font-bold mb-2">Prêt à transformer votre service client ?</h3>
+            <p className="text-gray-600 mb-4 md:mb-0">
+              Rejoignez les centaines d'entreprises qui font confiance à Celsai.
+            </p>
+          </div>
+          <a href="https://celsai.com/demo">
+            <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6">
+              Commencer votre essai gratuit
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </a>
         </div>
 
         <div className="mt-16 text-center">
@@ -81,10 +97,12 @@ const Testimonials = () => {
             </p>
           </div>
           <div className="mt-8">
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white">
-              Commencer votre essai gratuit
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <a href="https://celsai.com/demo">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+                Commencer votre essai gratuit
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </a>
           </div>
         </div>
       </Container>

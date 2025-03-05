@@ -1,16 +1,20 @@
+
 import React from "react";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Facebook, Twitter, Instagram, Linkedin, ArrowRight, Mail } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
+
 const Footer = () => {
   const navigate = useNavigate();
+  
   const handleLogoClick = e => {
     e.preventDefault();
     navigate("/");
     window.scrollTo(0, 0);
   };
+  
   return <footer className="bg-gray-50 pt-16 pb-8">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
@@ -125,10 +129,12 @@ const Footer = () => {
         <div className="py-8 border-t border-b border-gray-200 mb-8">
           <div className="text-center">
             <h3 className="font-semibold text-lg mb-4">Prêt à révolutionner votre support client ?</h3>
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white">
-              Commencer votre essai gratuit
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <a href="https://celsai.com/demo">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+                Commencer votre essai gratuit
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </a>
           </div>
         </div>
         
@@ -151,4 +157,5 @@ const Footer = () => {
       </Container>
     </footer>;
 };
+
 export default Footer;
