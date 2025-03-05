@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Container } from "@/components/ui/container";
+import { Link } from "react-router-dom";
 import { 
   Bot, 
   BookOpen, 
@@ -16,37 +17,44 @@ const features = [
   {
     icon: Bot,
     title: "Chatbot intelligent multicanal",
-    description: "Intégrez votre support client sur votre site web, applications mobiles, réseaux sociaux et messageries avec une compréhension contextuelle avancée."
+    description: "Intégrez votre support client sur votre site web, applications mobiles, réseaux sociaux et messageries avec une compréhension contextuelle avancée.",
+    link: "/features/chatbot"
   },
   {
     icon: BookOpen,
     title: "Base de connaissances dynamique",
-    description: "Analyse automatique de votre documentation existante et apprentissage continu basé sur les interactions précédentes."
+    description: "Analyse automatique de votre documentation existante et apprentissage continu basé sur les interactions précédentes.",
+    link: "/features/knowledge-base"
   },
   {
     icon: Wrench,
     title: "Résolution automatisée",
-    description: "Diagnostic préliminaire des problèmes techniques et proposition de solutions étape par étape pour guider vos utilisateurs."
+    description: "Diagnostic préliminaire des problèmes techniques et proposition de solutions étape par étape pour guider vos utilisateurs.",
+    link: "/features/automated-resolution"
   },
   {
     icon: ArrowUpRight,
     title: "Escalade intelligente",
-    description: "Détection des cas complexes nécessitant une intervention humaine avec transfert contextuel et résumé du problème."
+    description: "Détection des cas complexes nécessitant une intervention humaine avec transfert contextuel et résumé du problème.",
+    link: "/features/smart-escalation"
   },
   {
     icon: BarChart3,
     title: "Analyses et tableaux de bord",
-    description: "Suivi des problèmes fréquents, mesure des taux de résolution automatique et identification des axes d'amélioration."
+    description: "Suivi des problèmes fréquents, mesure des taux de résolution automatique et identification des axes d'amélioration.",
+    link: "/features/analytics"
   },
   {
     icon: Briefcase,
     title: "Personnalisation par secteur",
-    description: "Modèles pré-entraînés pour différents secteurs d'activité et adaptation du ton selon l'identité de votre marque."
+    description: "Modèles pré-entraînés pour différents secteurs d'activité et adaptation du ton selon l'identité de votre marque.",
+    link: "/features/industry-customization"
   },
   {
     icon: Network,
     title: "Intégration avec vos outils",
-    description: "Connexion aux principaux CRM, plateformes de ticketing et API ouvertes pour vos systèmes propriétaires."
+    description: "Connexion aux principaux CRM, plateformes de ticketing et API ouvertes pour vos systèmes propriétaires.",
+    link: "/features/integrations"
   }
 ];
 
@@ -75,8 +83,9 @@ const Features = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div 
-              key={index} 
+            <Link 
+              key={index}
+              to={feature.link}
               className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-all card-hover"
             >
               <div className="h-12 w-12 bg-celsai-50 rounded-lg flex items-center justify-center mb-5">
@@ -84,7 +93,7 @@ const Features = () => {
               </div>
               <h3 className="text-xl font-medium mb-3">{feature.title}</h3>
               <p className="text-gray-600">{feature.description}</p>
-            </div>
+            </Link>
           ))}
         </div>
         

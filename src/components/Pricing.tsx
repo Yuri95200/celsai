@@ -1,7 +1,9 @@
+
 import React, { useState } from "react";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { Check, HelpCircle, ChevronDown } from "lucide-react";
+import { Link } from "react-router-dom";
 import { 
   Tooltip,
   TooltipContent,
@@ -93,6 +95,17 @@ const faqItems = [
 const Pricing = () => {
   const [annualBilling, setAnnualBilling] = useState(true);
   
+  const handleDemoClick = () => {
+    window.location.href = "https://celsai.com/demo";
+  };
+
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
   return (
     <section id="pricing" className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <Container>
@@ -169,6 +182,7 @@ const Pricing = () => {
                     ? "bg-celsai-500 hover:bg-celsai-600 text-white" 
                     : "bg-white hover:bg-gray-50 text-gray-900 border border-gray-300"
                 } w-full`}
+                onClick={handleDemoClick}
               >
                 {plan.recommended ? "Commencer l'essai" : "Choisir ce forfait"}
               </Button>
@@ -184,7 +198,10 @@ const Pricing = () => {
                 Pour les grandes entreprises avec des besoins spécifiques, nous proposons des solutions sur mesure. Contactez notre équipe commerciale pour plus d'informations.
               </p>
             </div>
-            <Button className="bg-celsai-500 hover:bg-celsai-600 text-white">
+            <Button 
+              className="bg-celsai-500 hover:bg-celsai-600 text-white"
+              onClick={scrollToContact}
+            >
               Contacter l'équipe commerciale
             </Button>
           </div>
@@ -192,10 +209,10 @@ const Pricing = () => {
           <div id="pricing-faq" className="mt-8 pt-8 border-t border-gray-200">
             <h4 className="text-lg font-medium mb-4">Questions fréquentes</h4>
             
-            <Accordion type="single" collapsible className="w-full">
+            <Accordion type="single" collapsible className="w-full space-y-3">
               {faqItems.map((faq, index) => (
-                <AccordionItem key={index} value={`faq-${index}`}>
-                  <AccordionTrigger className="text-left font-medium flex items-center">
+                <AccordionItem key={index} value={`faq-${index}`} className="border rounded-lg p-0 overflow-hidden">
+                  <AccordionTrigger className="text-left text-base font-medium p-4 flex items-center bg-gray-50 hover:bg-gray-100">
                     {faq.question}
                     {faq.hasTooltip && (
                       <TooltipProvider>
@@ -210,7 +227,7 @@ const Pricing = () => {
                       </TooltipProvider>
                     )}
                   </AccordionTrigger>
-                  <AccordionContent>
+                  <AccordionContent className="p-4 text-base">
                     <p className="text-gray-600">{faq.answer}</p>
                   </AccordionContent>
                 </AccordionItem>
