@@ -126,30 +126,7 @@ const Pricing = () => {
             </Button>
           </div>
           
-          <div id="pricing-faq" className="mt-8 pt-8 border-t border-gray-200">
-            <h4 className="text-lg font-medium mb-4">Questions fréquentes</h4>
-            
-            <Accordion type="single" collapsible className="w-full space-y-3">
-              {faqItems.map((faq, index) => <AccordionItem key={index} value={`faq-${index}`} className="border rounded-lg p-0 overflow-hidden">
-                  <AccordionTrigger className="text-left text-base font-medium p-4 flex items-center bg-gray-50 hover:bg-gray-100">
-                    {faq.question}
-                    {faq.hasTooltip && <TooltipProvider>
-                        <Tooltip>
-                          <TooltipTrigger className="ml-2">
-                            <HelpCircle className="h-4 w-4 text-gray-400" />
-                          </TooltipTrigger>
-                          <TooltipContent>
-                            <p className="max-w-xs">{faq.tooltipContent}</p>
-                          </TooltipContent>
-                        </Tooltip>
-                      </TooltipProvider>}
-                  </AccordionTrigger>
-                  <AccordionContent className="p-4 text-base">
-                    <p className="text-gray-600">{faq.answer}</p>
-                  </AccordionContent>
-                </AccordionItem>)}
-            </Accordion>
-          </div>
+          
         </div>
       </Container>
     </section>;
