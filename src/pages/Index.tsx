@@ -14,6 +14,13 @@ const Index = () => {
   useEffect(() => {
     // Assurons-nous que la page commence tout en haut
     window.scrollTo(0, 0);
+    
+    // Force une seconde remontée après le chargement (pour corriger les problèmes sur mobile)
+    const timer = setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
+    
+    return () => clearTimeout(timer);
   }, []);
 
   return (

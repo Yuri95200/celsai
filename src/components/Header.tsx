@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Container } from "@/components/ui/container";
 import { cn } from "@/lib/utils";
@@ -170,9 +169,11 @@ const Header = () => {
             <Button variant="outline" className="border-gray-200 hover:border-celsai-400 hover:bg-celsai-50">
               Se connecter
             </Button>
-            <Button className="bg-celsai-500 hover:bg-celsai-600 text-white">
-              Essai gratuit
-            </Button>
+            <a href="https://celsai.com/demo">
+              <Button className="bg-celsai-500 hover:bg-celsai-600 text-white">
+                Essai gratuit
+              </Button>
+            </a>
           </div>
           
           <button 
@@ -247,9 +248,11 @@ const Header = () => {
                 <Button variant="outline" className="w-full border-gray-200">
                   Se connecter
                 </Button>
-                <Button className="w-full bg-celsai-500 hover:bg-celsai-600 text-white">
-                  Essai gratuit
-                </Button>
+                <a href="https://celsai.com/demo">
+                  <Button className="w-full bg-celsai-500 hover:bg-celsai-600 text-white">
+                    Essai gratuit
+                  </Button>
+                </a>
               </div>
             </div>
           </div>

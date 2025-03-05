@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Container } from "@/components/ui/container";
 import ContactForm from "./ContactForm";
@@ -23,10 +22,12 @@ const Contact = () => {
                 Contactez-nous pour discuter de vos besoins spécifiques et découvrir comment Celsai peut aider votre entreprise à offrir un support client exceptionnel.
               </p>
               <div className="mt-6 flex flex-col sm:flex-row gap-4">
-                <Button className="bg-blue-600 hover:bg-blue-700 text-white">
-                  Réserver une démo personnalisée
-                  <Calendar className="ml-2 h-5 w-5" />
-                </Button>
+                <a href="https://celsai.com/demo">
+                  <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+                    Réserver une démo personnalisée
+                    <Calendar className="ml-2 h-5 w-5" />
+                  </Button>
+                </a>
                 <Link to="/resources">
                   <Button variant="outline" className="border-gray-200 hover:border-blue-400 hover:bg-blue-50">
                     Consulter nos ressources

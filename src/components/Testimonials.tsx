@@ -37,8 +37,12 @@ const Testimonials = () => {
     <section id="testimonials" className="py-20 bg-gray-50">
       <Container>
         <div className="text-center mb-16">
-          <h3 className="text-2xl font-semibold text-purple-600 mb-2">Témoignages</h3>
-          <h2 className="text-3xl font-bold mb-4">Ce que nos clients disent</h2>
+          <span className="inline-block py-1 px-3 rounded-full bg-celsai-100 text-celsai-700 text-sm font-medium">
+            Témoignages
+          </span>
+          <h2 className="mt-4 font-bold text-gradient">
+            Ce que nos clients disent
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Découvrez comment Celsai transforme le service client de nombreuses entreprises à travers différents secteurs.
           </p>
@@ -66,12 +70,12 @@ const Testimonials = () => {
         </div>
 
         <div className="text-center mb-12">
-          <Link to="https://celsai.com/demo">
+          <a href="https://celsai.com/demo">
             <Button className="bg-blue-600 hover:bg-blue-700 text-white" size="lg">
               <BookOpen className="mr-2 h-5 w-5" />
               Découvrir nos études de cas
             </Button>
-          </Link>
+          </a>
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 bg-white p-8 rounded-xl shadow-md mb-16">

@@ -54,8 +54,12 @@ const PricingFAQ = () => {
     <section id="pricing-faq" className="py-20 bg-white">
       <Container>
         <div className="text-center mb-16">
-          <h3 className="text-2xl font-semibold text-purple-600 mb-2">F.A.Q</h3>
-          <h2 className="text-3xl font-bold mb-4">Questions fréquentes</h2>
+          <span className="inline-block py-1 px-3 rounded-full bg-celsai-100 text-celsai-700 text-sm font-medium">
+            F.A.Q
+          </span>
+          <h2 className="mt-4 font-bold text-gradient">
+            Questions fréquentes
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Nous avons rassemblé les réponses aux questions les plus courantes sur Celsai et nos offres.
           </p>
