@@ -45,9 +45,9 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Produit</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#features" className="text-gray-600 hover:text-celsai-500 transition-colors">
+                <Link to="/features" className="text-gray-600 hover:text-celsai-500 transition-colors">
                   Fonctionnalités
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#demo" className="text-gray-600 hover:text-celsai-500 transition-colors">

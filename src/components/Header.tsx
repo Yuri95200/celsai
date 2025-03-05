@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { Container } from "@/components/ui/container";
 import { cn } from "@/lib/utils";
@@ -73,6 +74,13 @@ const Header = () => {
     }
   };
 
+  const navigateToFeatures = (e) => {
+    e.preventDefault();
+    navigate("/features");
+    setIsMegaMenuOpen(false);
+    setIsMobileMenuOpen(false);
+  };
+
   const handleLogoClick = (e) => {
     e.preventDefault();
     navigate("/");
@@ -119,37 +127,44 @@ const Header = () => {
           </a>
           
           <nav className="hidden md:flex items-center space-x-8 relative">
-            <a
-              href="#features"
-              className="text-gray-600 hover:text-celsai-500 transition-colors flex items-center gap-1 group"
-              onClick={handleFeaturesClick}
-            >
-              Fonctionnalités
-              <ChevronDown className={`h-4 w-4 transition-transform ${isMegaMenuOpen ? 'rotate-180' : ''}`} />
-            </a>
+            <div className="relative">
+              <a
+                href="/features"
+                className="text-gray-600 hover:text-celsai-500 transition-colors"
+                onClick={navigateToFeatures}
+              >
+                Fonctionnalités
+              </a>
+              <button
+                className="ml-1 text-gray-600 hover:text-celsai-500 transition-colors inline-flex items-center"
+                onClick={handleFeaturesClick}
+              >
+                <ChevronDown className={`h-4 w-4 transition-transform ${isMegaMenuOpen ? 'rotate-180' : ''}`} />
+              </button>
 
-            {isMegaMenuOpen && (
-              <div className="absolute top-full left-0 mt-2 w-[700px] bg-white rounded-xl shadow-lg z-50 mega-menu-container animate-fade-in-up">
-                <div className="p-6 grid grid-cols-2 gap-6">
-                  {features.map((feature, index) => (
-                    <Link 
-                      key={index} 
-                      to={feature.path}
-                      className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
-                      onClick={() => setIsMegaMenuOpen(false)}
-                    >
-                      <div className="h-10 w-10 bg-celsai-50 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-celsai-100 transition-colors">
-                        <feature.icon className="h-5 w-5 text-celsai-500" />
-                      </div>
-                      <div>
-                        <h3 className="font-medium text-gray-900">{feature.title}</h3>
-                        <p className="text-sm text-gray-600">{feature.description}</p>
-                      </div>
-                    </Link>
-                  ))}
+              {isMegaMenuOpen && (
+                <div className="absolute top-full left-0 mt-2 w-[700px] bg-white rounded-xl shadow-lg z-50 mega-menu-container animate-fade-in-up">
+                  <div className="p-6 grid grid-cols-2 gap-6">
+                    {features.map((feature, index) => (
+                      <Link 
+                        key={index} 
+                        to={feature.path}
+                        className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
+                        onClick={() => setIsMegaMenuOpen(false)}
+                      >
+                        <div className="h-10 w-10 bg-celsai-50 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-celsai-100 transition-colors">
+                          <feature.icon className="h-5 w-5 text-celsai-500" />
+                        </div>
+                        <div>
+                          <h3 className="font-medium text-gray-900">{feature.title}</h3>
+                          <p className="text-sm text-gray-600">{feature.description}</p>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            )}
+              )}
+            </div>
 
             <a href="#demo" className="text-gray-600 hover:text-celsai-500 transition-colors">
               Démo
@@ -188,19 +203,30 @@ const Header = () => {
           <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg rounded-b-xl animate-fade-in-up">
             <div className="px-4 py-6 flex flex-col space-y-4">
               <div className="w-full">
+                <Link
+                  to="/features"
+                  className="block w-full text-gray-600 hover:text-celsai-500 py-2"
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    setIsMobileFeaturesOpen(false);
+                  }}
+                >
+                  Fonctionnalités
+                </Link>
+                
                 <a 
                   href="#" 
-                  className="block w-full text-gray-600 hover:text-celsai-500 py-2"
+                  className="block w-full text-gray-500 hover:text-celsai-500 py-2 pl-4"
                   onClick={toggleMobileFeatures}
                 >
                   <div className="flex items-center justify-between">
-                    <span>Fonctionnalités</span>
+                    <span>Voir en détail</span>
                     <ChevronDown className={`h-4 w-4 transition-transform ${isMobileFeaturesOpen ? 'rotate-180' : ''}`} />
                   </div>
                 </a>
                 
                 {isMobileFeaturesOpen && (
-                  <div className="pl-4 space-y-2 animate-fade-in-down">
+                  <div className="pl-8 space-y-2 animate-fade-in-down">
                     {features.map((feature, index) => (
                       <Link
                         key={index}

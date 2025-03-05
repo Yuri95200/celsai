@@ -7,6 +7,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 import CaseStudies from "./pages/CaseStudies";
 import Resources from "./pages/Resources";
+import AllFeatures from "./pages/AllFeatures";
 import ScrollToTop from "./components/ScrollToTop";
 import DecorativeMotifs from "./components/DecorativeMotifs";
 import "./App.css";
@@ -32,6 +33,7 @@ function App() {
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/case-studies" element={<CaseStudies />} />
         <Route path="/resources" element={<Resources />} />
+        <Route path="/features" element={<AllFeatures />} />
         
         {/* Feature routes */}
         <Route path="/features/chatbot" element={<ChatbotFeature />} />
