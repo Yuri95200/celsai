@@ -92,6 +92,11 @@ const Header = () => {
     setIsMobileFeaturesOpen(!isMobileFeaturesOpen);
   };
 
+  const navigateToContact = () => {
+    navigate("/contact");
+    setIsMobileMenuOpen(false);
+  };
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (isMegaMenuOpen && !event.target.closest('.mega-menu-container')) {
@@ -175,9 +180,9 @@ const Header = () => {
             <a href="#pricing" className="text-gray-600 hover:text-celsai-500 transition-colors">
               Tarifs
             </a>
-            <a href="#contact" className="text-gray-600 hover:text-celsai-500 transition-colors">
+            <Link to="/contact" className="text-gray-600 hover:text-celsai-500 transition-colors">
               Contact
-            </a>
+            </Link>
           </nav>
           
           <div className="hidden md:flex items-center space-x-4">
@@ -203,27 +208,24 @@ const Header = () => {
           <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg rounded-b-xl animate-fade-in-up">
             <div className="px-4 py-6 flex flex-col space-y-4">
               <div className="w-full">
-                <Link
-                  to="/features"
-                  className="block w-full text-gray-600 hover:text-celsai-500 py-2"
-                  onClick={() => {
-                    setIsMobileMenuOpen(false);
-                    setIsMobileFeaturesOpen(false);
-                  }}
-                >
-                  Fonctionnalités
-                </Link>
-                
-                <a 
-                  href="#" 
-                  className="block w-full text-gray-500 hover:text-celsai-500 py-2 pl-4"
-                  onClick={toggleMobileFeatures}
-                >
-                  <div className="flex items-center justify-between">
-                    <span>Voir en détail</span>
+                <div className="flex items-center justify-between">
+                  <Link
+                    to="/features"
+                    className="block w-full text-gray-600 hover:text-celsai-500 py-2"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setIsMobileFeaturesOpen(false);
+                    }}
+                  >
+                    Fonctionnalités
+                  </Link>
+                  <button 
+                    className="text-gray-500 hover:text-celsai-500 p-1"
+                    onClick={toggleMobileFeatures}
+                  >
                     <ChevronDown className={`h-4 w-4 transition-transform ${isMobileFeaturesOpen ? 'rotate-180' : ''}`} />
-                  </div>
-                </a>
+                  </button>
+                </div>
                 
                 {isMobileFeaturesOpen && (
                   <div className="pl-8 space-y-2 animate-fade-in-down">
@@ -263,13 +265,13 @@ const Header = () => {
               >
                 Tarifs
               </a>
-              <a 
-                href="#contact" 
+              <Link 
+                to="/contact" 
                 className="block py-2 text-gray-600 hover:text-celsai-500"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact
-              </a>
+              </Link>
               <div className="pt-4 space-y-3">
                 <Button variant="outline" className="w-full border-gray-200">
                   Se connecter
