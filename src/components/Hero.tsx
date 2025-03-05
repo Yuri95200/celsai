@@ -1,16 +1,12 @@
-
 import React from "react";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, PlayCircle } from "lucide-react";
-
 const Hero = () => {
   const handleDemoClick = () => {
     window.location.href = "https://celsai.com/demo";
   };
-
-  return (
-    <section className="pt-32 pb-20 overflow-hidden">
+  return <section className="pt-32 pb-20 overflow-hidden">
       <Container>
         <div className="flex flex-col lg:flex-row items-center">
           <div className="w-full lg:w-1/2 lg:pr-12 mb-10 lg:mb-0">
@@ -21,33 +17,22 @@ const Hero = () => {
               <h1 className="font-bold tracking-tight">
                 <span className="text-gradient">L'intelligence artificielle</span> au service de votre support client
               </h1>
-              <p className="text-lg md:text-xl text-gray-600">
-                Transformez votre service client avec Celsai, la solution SaaS qui utilise l'IA pour automatiser jusqu'à 70% de vos interactions tout en améliorant la satisfaction client.
-              </p>
+              <p className="text-lg md:text-xl text-gray-600">Transformez votre service client avec Celsai, la solution qui utilise l'IA pour automatiser jusqu'à 70% de vos interactions tout en améliorant la satisfaction client.</p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button 
-                  className="bg-blue-600 hover:bg-blue-700 text-white text-lg py-6 px-8"
-                  onClick={handleDemoClick}
-                >
+                <Button className="bg-blue-600 hover:bg-blue-700 text-white text-lg py-6 px-8" onClick={handleDemoClick}>
                   Commencer l'essai gratuit
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
-                <Button 
-                  variant="outline" 
-                  className="border-gray-200 hover:border-blue-400 hover:bg-blue-50 text-lg py-6 px-8"
-                  onClick={handleDemoClick}
-                >
+                <Button variant="outline" className="border-gray-200 hover:border-blue-400 hover:bg-blue-50 text-lg py-6 px-8" onClick={handleDemoClick}>
                   <PlayCircle className="mr-2 h-5 w-5" />
                   Voir la démo
                 </Button>
               </div>
               <div className="pt-6 flex items-center space-x-6">
                 <div className="flex -space-x-2">
-                  {[1, 2, 3, 4].map((index) => (
-                    <div key={index} className="w-10 h-10 rounded-full border-2 border-white bg-blue-500 flex items-center justify-center shadow-sm">
+                  {[1, 2, 3, 4].map(index => <div key={index} className="w-10 h-10 rounded-full border-2 border-white bg-blue-500 flex items-center justify-center shadow-sm">
                       <span className="text-white font-medium text-xs">C{index}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">
@@ -100,11 +85,7 @@ const Hero = () => {
                 </div>
                 <div className="bg-white border-t border-gray-100 p-4">
                   <div className="flex items-center">
-                    <input
-                      type="text"
-                      placeholder="Écrivez votre message..."
-                      className="w-full px-4 py-2 text-sm bg-gray-50 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    />
+                    <input type="text" placeholder="Écrivez votre message..." className="w-full px-4 py-2 text-sm bg-gray-50 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
                     <button className="ml-2 bg-blue-600 text-white p-2 rounded-full">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -117,8 +98,6 @@ const Hero = () => {
           </div>
         </div>
       </Container>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
