@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
@@ -99,6 +98,11 @@ const Footer = () => {
                 <a href="#" className="text-gray-400 hover:text-celsai-500 transition-colors">
                   Partenaires
                 </a>
+              </li>
+              <li>
+                <Link to="/login" className="text-gray-600 hover:text-celsai-500 transition-colors font-medium">
+                  Connexion
+                </Link>
               </li>
             </ul>
           </div>
