@@ -73,8 +73,34 @@ const Demo = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
-        <title>Réservez une démo gratuite | Celsai - Solution d'IA pour Service Client</title>
-        <meta name="description" content="Réservez une démonstration personnalisée de Celsai et découvrez comment notre IA peut transformer votre service client. Consultation gratuite de 30 minutes." />
+        <title>Réservez une Démo de Celsai | Découvrez notre IA Service Client</title>
+        <meta name="description" content="Réservez une démonstration personnalisée pour découvrir comment Celsai peut transformer votre service client grâce à notre plateforme d'IA intégrée et nos solutions sur mesure." />
+        <meta name="keywords" content="démonstration IA, démo service client, présentation chatbot, essai plateforme IA, rendez-vous consultation, Celsai" />
+        <link rel="canonical" href="https://www.celsai.com/demo" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Réservez une Démo de Celsai | Découvrez notre IA Service Client" />
+        <meta property="og:description" content="Réservez une démonstration personnalisée pour découvrir comment Celsai peut transformer votre service client." />
+        <meta property="og:url" content="https://www.celsai.com/demo" />
+        <meta property="og:image" content="/lovable-uploads/7a259d38-8248-4be9-857d-6ed9c88e32e9.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Réservez une Démo de Celsai | Découvrez notre IA Service Client" />
+        <meta name="twitter:description" content="Réservez une démonstration personnalisée pour découvrir comment Celsai peut transformer votre service client." />
+        <meta name="twitter:image" content="/lovable-uploads/7a259d38-8248-4be9-857d-6ed9c88e32e9.png" />
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Réservez une Démo de Celsai",
+            "description": "Démonstration personnalisée de notre solution d'IA pour service client",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock",
+              "description": "Démo gratuite de 30 minutes avec un expert Celsai"
+            }
+          }
+        `}</script>
       </Helmet>
       <Header />
       <main className="flex-grow pt-32 pb-20 w-full">
@@ -105,21 +131,21 @@ const Demo = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mt-8">
                 <div className="bg-white p-4 sm:p-6 rounded-lg shadow-sm">
                   <div className="flex items-center justify-center mx-auto mb-4">
-                    <img src="/lovable-uploads/2f8829b5-202e-464f-bb75-0799bd8e0a3c.png" alt="Celsai" className="h-12 w-12" />
+                    <img src="/lovable-uploads/7a259d38-8248-4be9-857d-6ed9c88e32e9.png" alt="Celsai" className="h-12 w-12" />
                   </div>
                   <h3 className="font-medium text-lg mb-2">Solutions sur mesure</h3>
                   <p className="text-sm sm:text-base text-gray-600">Découvrez comment notre technologie s'adapte spécifiquement à votre secteur d'activité.</p>
                 </div>
                 <div className="bg-white p-4 sm:p-6 rounded-lg shadow-sm">
                   <div className="flex items-center justify-center mx-auto mb-4">
-                    <img src="/lovable-uploads/2f8829b5-202e-464f-bb75-0799bd8e0a3c.png" alt="Celsai" className="h-12 w-12" />
+                    <img src="/lovable-uploads/7a259d38-8248-4be9-857d-6ed9c88e32e9.png" alt="Celsai" className="h-12 w-12" />
                   </div>
                   <h3 className="font-medium text-lg mb-2">Questions spécifiques</h3>
                   <p className="text-sm sm:text-base text-gray-600">Posez toutes vos questions à un expert qui comprend les défis de votre entreprise.</p>
                 </div>
                 <div className="bg-white p-4 sm:p-6 rounded-lg shadow-sm">
                   <div className="flex items-center justify-center mx-auto mb-4">
-                    <img src="/lovable-uploads/2f8829b5-202e-464f-bb75-0799bd8e0a3c.png" alt="Celsai" className="h-12 w-12" />
+                    <img src="/lovable-uploads/7a259d38-8248-4be9-857d-6ed9c88e32e9.png" alt="Celsai" className="h-12 w-12" />
                   </div>
                   <h3 className="font-medium text-lg mb-2">Évaluation précise</h3>
                   <p className="text-sm sm:text-base text-gray-600">Obtenez une estimation claire des bénéfices et du ROI pour votre organisation.</p>

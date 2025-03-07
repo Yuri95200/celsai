@@ -10,8 +10,40 @@ const Contact = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Helmet>
-        <title>Contactez notre équipe | Celsai - Solution d'IA pour Service Client</title>
-        <meta name="description" content="Contactez l'équipe Celsai pour en savoir plus sur nos solutions d'IA pour service client. Demandez une démo ou un devis personnalisé." />
+        <title>Contactez Celsai | Experts en IA pour Service Client</title>
+        <meta name="description" content="Entrez en contact avec notre équipe d'experts pour discuter de vos besoins en matière de service client IA et découvrir comment Celsai peut transformer votre expérience client." />
+        <meta name="keywords" content="contact Celsai, service client IA, assistance IA, démo service client, support technique IA, Celsai" />
+        <link rel="canonical" href="https://www.celsai.com/contact" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Contactez Celsai | Experts en IA pour Service Client" />
+        <meta property="og:description" content="Entrez en contact avec notre équipe d'experts pour discuter de vos besoins en matière de service client IA." />
+        <meta property="og:url" content="https://www.celsai.com/contact" />
+        <meta property="og:image" content="/lovable-uploads/7a259d38-8248-4be9-857d-6ed9c88e32e9.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contactez Celsai | Experts en IA pour Service Client" />
+        <meta name="twitter:description" content="Entrez en contact avec notre équipe d'experts pour discuter de vos besoins en matière de service client IA." />
+        <meta name="twitter:image" content="/lovable-uploads/7a259d38-8248-4be9-857d-6ed9c88e32e9.png" />
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Contact Celsai",
+            "description": "Contactez notre équipe d'experts en IA pour service client",
+            "mainEntity": {
+              "@type": "Organization",
+              "name": "Celsai",
+              "telephone": "+33 6 05 53 35 46",
+              "email": "contact@celsai.com",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "24 rue du Gouverneur Général Eboue",
+                "addressLocality": "Issy-les-Moulineaux",
+                "postalCode": "92130",
+                "addressCountry": "FR"
+              }
+            }
+          }
+        `}</script>
       </Helmet>
       <Header />
       <main className="flex-grow pt-24">
