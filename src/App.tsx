@@ -1,6 +1,6 @@
 
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import TermsOfService from "./pages/TermsOfService";
@@ -64,38 +64,40 @@ function SEOWrapper() {
 
 function App() {
   return (
-    <Router>
-      <SEOWrapper />
-      <ScrollToTop />
-      <DecorativeMotifs />
-      <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/terms" element={<TermsOfService />} />
-        <Route path="/privacy" element={<PrivacyPolicy />} />
-        <Route path="/features" element={<AllFeatures />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/demo" element={<Demo />} />
-        
-        {/* Feature routes */}
-        <Route path="/features/chatbot" element={<ChatbotFeature />} />
-        <Route path="/features/knowledge-base" element={<KnowledgeBaseFeature />} />
-        <Route path="/features/automated-resolution" element={<AutomatedResolutionFeature />} />
-        <Route path="/features/smart-escalation" element={<SmartEscalationFeature />} />
-        <Route path="/features/analytics" element={<AnalyticsFeature />} />
-        <Route path="/features/industry-customization" element={<IndustryCustomizationFeature />} />
-        <Route path="/features/integrations" element={<IntegrationsFeature />} />
-        
-        {/* Article routes */}
-        <Route path="/articles/guide-ia-2024" element={<GuideIA2024 />} />
-        <Route path="/articles/webinaire-support-omnicanal" element={<WebinaireSupportOmnicanal />} />
-        <Route path="/articles/livre-blanc-roi" element={<LivreBlancROI />} />
-        <Route path="/articles/metriques-service-client" element={<MetriquesServiceClient />} />
-        <Route path="/articles/etude-cas-banque-digitale" element={<EtudeCasBanqueDigitale />} />
-        
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <SEOWrapper />
+        <ScrollToTop />
+        <DecorativeMotifs />
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/terms" element={<TermsOfService />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/features" element={<AllFeatures />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/demo" element={<Demo />} />
+          
+          {/* Feature routes */}
+          <Route path="/features/chatbot" element={<ChatbotFeature />} />
+          <Route path="/features/knowledge-base" element={<KnowledgeBaseFeature />} />
+          <Route path="/features/automated-resolution" element={<AutomatedResolutionFeature />} />
+          <Route path="/features/smart-escalation" element={<SmartEscalationFeature />} />
+          <Route path="/features/analytics" element={<AnalyticsFeature />} />
+          <Route path="/features/industry-customization" element={<IndustryCustomizationFeature />} />
+          <Route path="/features/integrations" element={<IntegrationsFeature />} />
+          
+          {/* Article routes */}
+          <Route path="/articles/guide-ia-2024" element={<GuideIA2024 />} />
+          <Route path="/articles/webinaire-support-omnicanal" element={<WebinaireSupportOmnicanal />} />
+          <Route path="/articles/livre-blanc-roi" element={<LivreBlancROI />} />
+          <Route path="/articles/metriques-service-client" element={<MetriquesServiceClient />} />
+          <Route path="/articles/etude-cas-banque-digitale" element={<EtudeCasBanqueDigitale />} />
+          
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Router>
+    </HelmetProvider>
   );
 }
 
