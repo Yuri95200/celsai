@@ -42,10 +42,10 @@ const MetriquesServiceClient = () => {
         Un bon score CSAT varie selon les secteurs, mais en règle générale :
       </p>
       <ul>
-        <li>Exceptionnel : > 95%</li>
+        <li>Exceptionnel : &gt; 95%</li>
         <li>Excellent : 90% - 95%</li>
         <li>Bon : 80% - 89%</li>
-        <li>Nécessite une amélioration : < 80%</li>
+        <li>Nécessite une amélioration : &lt; 80%</li>
       </ul>
 
       <h3>Comment l'améliorer</h3>
@@ -75,11 +75,11 @@ const MetriquesServiceClient = () => {
 
       <h3>Benchmark</h3>
       <ul>
-        <li>Exceptionnel : > 70</li>
+        <li>Exceptionnel : &gt; 70</li>
         <li>Excellent : 50 - 70</li>
         <li>Bon : 30 - 49</li>
         <li>Moyen : 0 - 29</li>
-        <li>Nécessite une amélioration : < 0</li>
+        <li>Nécessite une amélioration : &lt; 0</li>
       </ul>
 
       <h3>Comment l'améliorer</h3>
@@ -109,10 +109,10 @@ const MetriquesServiceClient = () => {
 
       <h3>Benchmark</h3>
       <ul>
-        <li>Exceptionnel : > 90%</li>
+        <li>Exceptionnel : &gt; 90%</li>
         <li>Excellent : 80% - 90%</li>
         <li>Bon : 70% - 79%</li>
-        <li>Nécessite une amélioration : < 70%</li>
+        <li>Nécessite une amélioration : &lt; 70%</li>
       </ul>
 
       <h3>Comment l'améliorer</h3>
@@ -169,10 +169,10 @@ const MetriquesServiceClient = () => {
 
       <h3>Benchmark</h3>
       <ul>
-        <li>Exceptionnel : > 6.5</li>
+        <li>Exceptionnel : &gt; 6.5</li>
         <li>Excellent : 5.8 - 6.5</li>
         <li>Bon : 5.0 - 5.7</li>
-        <li>Nécessite une amélioration : < 5.0</li>
+        <li>Nécessite une amélioration : &lt; 5.0</li>
       </ul>
 
       <h3>Comment l'améliorer</h3>
