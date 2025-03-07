@@ -7,6 +7,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 import AllFeatures from "./pages/AllFeatures";
 import Contact from "./pages/Contact";
+import Demo from "./pages/Demo";
 import ScrollToTop from "./components/ScrollToTop";
 import DecorativeMotifs from "./components/DecorativeMotifs";
 import "./App.css";
@@ -39,6 +40,7 @@ function App() {
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/features" element={<AllFeatures />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/demo" element={<Demo />} />
         
         {/* Feature routes */}
         <Route path="/features/chatbot" element={<ChatbotFeature />} />

@@ -42,11 +42,11 @@ const FeatureLayout = ({ icon: Icon, title, description, imageSrc, children }: F
                 <p className="text-xl text-gray-600">{description}</p>
                 
                 <div className="flex flex-wrap gap-4">
-                  <a href="https://celsai.com/demo" target="_blank" rel="noopener noreferrer">
+                  <Link to="/demo">
                     <Button className="bg-celsai-500 hover:bg-celsai-600 text-white">
                       Essai gratuit
                     </Button>
-                  </a>
+                  </Link>
                   <Link to="/contact">
                     <Button variant="outline" className="border-gray-200">
                       Demander une démo
@@ -59,7 +59,7 @@ const FeatureLayout = ({ icon: Icon, title, description, imageSrc, children }: F
               <div className="md:w-1/2">
                 {imageSrc ? (
                   <img 
-                    src={`/images/${imageSrc}`} 
+                    src={imageSrc} 
                     alt={`${title} illustration`} 
                     className="rounded-xl shadow-lg w-full object-cover h-auto max-h-[400px]"
                     onError={(e) => {
@@ -91,11 +91,11 @@ const FeatureLayout = ({ icon: Icon, title, description, imageSrc, children }: F
                 Rejoignez plus de 500 entreprises qui utilisent Celsai pour améliorer leur support client et réduire leurs coûts.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <a href="https://celsai.com/demo" target="_blank" rel="noopener noreferrer">
+                <Link to="/demo">
                   <Button className="bg-celsai-500 hover:bg-celsai-600 text-white" size="lg">
                     Commencer votre essai gratuit
                   </Button>
-                </a>
+                </Link>
                 <Link to="/contact">
                   <Button variant="outline" className="border-gray-200" size="lg">
                     Parler à un conseiller

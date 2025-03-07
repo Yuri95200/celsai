@@ -3,6 +3,8 @@ import React from "react";
 import FeatureLayout from "@/components/FeatureLayout";
 import { Container } from "@/components/ui/container";
 import { Bot, MessageSquare, Languages, Clock, Shield, Users } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const ChatbotFeature = () => {
   const benefits = [
@@ -95,6 +97,14 @@ const ChatbotFeature = () => {
                 </p>
               </div>
             </div>
+          </div>
+          
+          <div className="mt-16 text-center">
+            <Link to="/demo">
+              <Button size="lg" className="bg-celsai-500 hover:bg-celsai-600 text-white">
+                Réserver une démonstration personnalisée
+              </Button>
+            </Link>
           </div>
         </Container>
       </section>

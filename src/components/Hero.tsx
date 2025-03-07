@@ -1,14 +1,10 @@
-
 import React from "react";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, PlayCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
-  const handleDemoClick = () => {
-    window.location.href = "https://celsai.com/demo";
-  };
-
   return <section className="pt-32 pb-20 overflow-hidden">
       <Container>
         <div className="flex flex-col lg:flex-row items-center">
@@ -22,18 +18,18 @@ const Hero = () => {
               </h1>
               <p className="text-lg md:text-xl text-gray-600">Transformez votre service client avec Celsai, la solution qui utilise l'IA pour automatiser jusqu'à 70% de vos interactions tout en améliorant la satisfaction client.</p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <a href="https://celsai.com/demo">
+                <Link to="/demo">
                   <Button className="bg-blue-600 hover:bg-blue-700 text-white text-lg py-6 px-8">
                     Commencer l'essai gratuit
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
-                </a>
-                <a href="https://celsai.com/demo">
+                </Link>
+                <Link to="/demo">
                   <Button variant="outline" className="border-gray-200 hover:border-blue-400 hover:bg-blue-50 text-lg py-6 px-8">
                     <PlayCircle className="mr-2 h-5 w-5" />
                     Voir la démo
                   </Button>
-                </a>
+                </Link>
               </div>
               <div className="pt-6 flex items-center space-x-6">
                 <div className="flex -space-x-2">

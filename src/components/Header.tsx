@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Container } from "@/components/ui/container";
 import { cn } from "@/lib/utils";
@@ -171,9 +170,9 @@ const Header = () => {
               )}
             </div>
 
-            <a href="#demo" className="text-gray-600 hover:text-celsai-500 transition-colors">
+            <Link to="/demo" className="text-gray-600 hover:text-celsai-500 transition-colors">
               Démo
-            </a>
+            </Link>
             <a href="#testimonials" className="text-gray-600 hover:text-celsai-500 transition-colors">
               Témoignages
             </a>
@@ -189,11 +188,11 @@ const Header = () => {
             <Button variant="outline" className="border-gray-200 hover:border-celsai-400 hover:bg-celsai-50">
               Se connecter
             </Button>
-            <a href="https://celsai.com/demo">
+            <Link to="/demo">
               <Button className="bg-celsai-500 hover:bg-celsai-600 text-white">
                 Essai gratuit
               </Button>
-            </a>
+            </Link>
           </div>
           
           <button 
@@ -244,13 +243,13 @@ const Header = () => {
                 )}
               </div>
               
-              <a 
-                href="#demo" 
+              <Link 
+                to="/demo" 
                 className="block py-2 text-gray-600 hover:text-celsai-500"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Démo
-              </a>
+              </Link>
               <a 
                 href="#testimonials" 
                 className="block py-2 text-gray-600 hover:text-celsai-500"
@@ -276,11 +275,11 @@ const Header = () => {
                 <Button variant="outline" className="w-full border-gray-200">
                   Se connecter
                 </Button>
-                <a href="https://celsai.com/demo">
+                <Link to="/demo">
                   <Button className="w-full bg-celsai-500 hover:bg-celsai-600 text-white">
                     Essai gratuit
                   </Button>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

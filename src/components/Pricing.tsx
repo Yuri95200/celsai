@@ -5,6 +5,7 @@ import { Check, HelpCircle, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+
 const pricingPlans = [{
   name: "Startup",
   price: 200,
@@ -27,6 +28,7 @@ const pricingPlans = [{
   recommended: false,
   color: "bg-white"
 }];
+
 const faqItems = [{
   question: "Puis-je changer de forfait à tout moment ?",
   answer: "Oui, vous pouvez mettre à niveau ou rétrograder votre forfait à tout moment. Les changements prendront effet immédiatement.",
@@ -45,11 +47,10 @@ const faqItems = [{
   answer: "Site web, applications mobiles, Facebook Messenger, WhatsApp, Instagram, Twitter, et plus selon votre forfait.",
   hasTooltip: false
 }];
+
 const Pricing = () => {
   const [annualBilling, setAnnualBilling] = useState(true);
-  const handleDemoClick = () => {
-    window.location.href = "https://celsai.com/demo";
-  };
+
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
     if (contactSection) {
@@ -58,6 +59,7 @@ const Pricing = () => {
       });
     }
   };
+
   return <section id="pricing" className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -107,9 +109,11 @@ const Pricing = () => {
                   </li>)}
               </ul>
               
-              <Button className={`${plan.recommended ? "bg-celsai-500 hover:bg-celsai-600 text-white" : "bg-white hover:bg-gray-50 text-gray-900 border border-gray-300"} w-full`} onClick={handleDemoClick}>
-                {plan.recommended ? "Commencer l'essai" : "Choisir ce forfait"}
-              </Button>
+              <Link to="/demo">
+                <Button className={`${plan.recommended ? "bg-celsai-500 hover:bg-celsai-600 text-white" : "bg-white hover:bg-gray-50 text-gray-900 border border-gray-300"} w-full`}>
+                  {plan.recommended ? "Commencer l'essai" : "Choisir ce forfait"}
+                </Button>
+              </Link>
             </div>)}
         </div>
         
@@ -125,10 +129,9 @@ const Pricing = () => {
               Contacter l'équipe commerciale
             </Button>
           </div>
-          
-          
         </div>
       </Container>
     </section>;
 };
+
 export default Pricing;
