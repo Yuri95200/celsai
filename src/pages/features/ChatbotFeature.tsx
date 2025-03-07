@@ -38,7 +38,7 @@ const ChatbotFeature = () => {
       icon={Bot}
       title="Chatbot intelligent multicanal"
       description="Offrez une assistance client automatisée et intelligente sur tous vos canaux digitaux."
-      imageSrc="chatbot-interface.jpg"
+      imageSrc="/images/photo-1486312338219-ce68d2c6f44d.jpg"
     >
       <section className="py-16">
         <Container>
