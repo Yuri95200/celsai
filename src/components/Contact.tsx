@@ -40,7 +40,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-medium text-lg">Bureau</h3>
-                  <p className="text-gray-600 mt-1">24 Rue du Gouverneur Général Eboue</p>
+                  <p className="text-gray-600 mt-1">24 rue du Gouverneur Général Eboue</p>
                   <p className="text-gray-600">92130 Issy-les-Moulineaux, France</p>
                 </div>
               </div>
