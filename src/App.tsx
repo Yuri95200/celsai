@@ -6,13 +6,11 @@ import TermsOfService from "./pages/TermsOfService";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 import CaseStudies from "./pages/CaseStudies";
-import Resources from "./pages/Resources";
 import AllFeatures from "./pages/AllFeatures";
 import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollToTop";
 import DecorativeMotifs from "./components/DecorativeMotifs";
 import "./App.css";
-import ResourceDetail from "./components/resources/ResourceDetail";
 
 // Feature pages
 import ChatbotFeature from "./pages/features/ChatbotFeature";
@@ -41,8 +39,6 @@ function App() {
         <Route path="/terms" element={<TermsOfService />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/case-studies" element={<CaseStudies />} />
-        <Route path="/resources" element={<Resources />} />
-        <Route path="/resources/detail/:id" element={<ResourceDetail />} />
         <Route path="/features" element={<AllFeatures />} />
         <Route path="/contact" element={<Contact />} />
         
@@ -56,11 +52,11 @@ function App() {
         <Route path="/features/integrations" element={<IntegrationsFeature />} />
         
         {/* Article routes */}
-        <Route path="/resources/guide-ia-2024" element={<GuideIA2024 />} />
-        <Route path="/resources/webinaire-support-omnicanal" element={<WebinaireSupportOmnicanal />} />
-        <Route path="/resources/livre-blanc-roi" element={<LivreBlancROI />} />
-        <Route path="/resources/metriques-service-client" element={<MetriquesServiceClient />} />
-        <Route path="/resources/etude-cas-banque-digitale" element={<EtudeCasBanqueDigitale />} />
+        <Route path="/articles/guide-ia-2024" element={<GuideIA2024 />} />
+        <Route path="/articles/webinaire-support-omnicanal" element={<WebinaireSupportOmnicanal />} />
+        <Route path="/articles/livre-blanc-roi" element={<LivreBlancROI />} />
+        <Route path="/articles/metriques-service-client" element={<MetriquesServiceClient />} />
+        <Route path="/articles/etude-cas-banque-digitale" element={<EtudeCasBanqueDigitale />} />
         
         <Route path="*" element={<NotFound />} />
       </Routes>

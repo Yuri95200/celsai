@@ -81,17 +81,12 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/resources" className="text-gray-600 hover:text-celsai-500 transition-colors">
-                  Ressources
-                </Link>
-              </li>
-              <li>
                 <Link to="/case-studies" className="text-gray-600 hover:text-celsai-500 transition-colors">
                   Études de cas
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-celsai-500 transition-colors">
+                <a href="#" className="text-gray-400 hover:text-celsai-500 transition-colors">
                   Carrières
                 </a>
               </li>
@@ -101,7 +96,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-celsai-500 transition-colors">
+                <a href="#" className="text-gray-400 hover:text-celsai-500 transition-colors">
                   Partenaires
                 </a>
               </li>
