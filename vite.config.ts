@@ -23,7 +23,6 @@ export default defineConfig(({ mode }) => ({
   build: {
     outDir: "dist",
     assetsDir: "assets",
-    // Assurez-vous que le sitemap.xml est copié tel quel lors du build
     assetsInlineLimit: 4096,
   },
 }));
