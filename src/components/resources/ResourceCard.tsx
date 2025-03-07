@@ -29,10 +29,16 @@ const ResourceCard = ({
   link = "#",
   featured = false 
 }: ResourceCardProps) => {
+  // Create the detail link
+  const detailLink = `/resources/detail/${id}`;
+  
+  // Use the article link if available, otherwise use the detail link
+  const resourceLink = link && link.startsWith("/resources/") ? link : detailLink;
+
   if (featured) {
     return (
       <div key={id} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all group">
-        <Link to={link} className="block">
+        <Link to={resourceLink} className="block">
           <div className="relative h-48 overflow-hidden">
             <img 
               src={imageUrl}
@@ -52,7 +58,7 @@ const ResourceCard = ({
           </div>
         </Link>
         <div className="p-6">
-          <Link to={link}>
+          <Link to={resourceLink}>
             <h3 className="font-bold text-lg mb-2 group-hover:text-blue-600 transition-colors">
               {title}
             </h3>
@@ -74,14 +80,14 @@ const ResourceCard = ({
           <div className="mt-4">
             {downloadable ? (
               <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white" asChild>
-                <Link to={link}>
+                <Link to={resourceLink}>
                   <Download className="mr-2 h-4 w-4" />
                   Télécharger
                 </Link>
               </Button>
             ) : (
               <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white" asChild>
-                <Link to={link}>
+                <Link to={resourceLink}>
                   <PlayCircle className="mr-2 h-4 w-4" />
                   Regarder
                 </Link>
@@ -95,7 +101,7 @@ const ResourceCard = ({
 
   return (
     <div key={id} className="bg-white rounded-lg shadow overflow-hidden hover:shadow-md transition-all group">
-      <Link to={link} className="block">
+      <Link to={resourceLink} className="block">
         <div className="relative h-40 overflow-hidden">
           <img 
             src={imageUrl}
@@ -110,7 +116,7 @@ const ResourceCard = ({
         </div>
       </Link>
       <div className="p-5">
-        <Link to={link}>
+        <Link to={resourceLink}>
           <h3 className="font-bold mb-3 group-hover:text-blue-600 transition-colors">
             {title}
           </h3>
@@ -125,7 +131,7 @@ const ResourceCard = ({
           </div>
         </div>
         <Button variant="ghost" className="w-full justify-between hover:text-blue-600" asChild>
-          <Link to={link}>
+          <Link to={resourceLink}>
             Lire la suite
             <ChevronRight className="h-5 w-5" />
           </Link>

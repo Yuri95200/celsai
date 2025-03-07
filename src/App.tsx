@@ -12,6 +12,7 @@ import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollToTop";
 import DecorativeMotifs from "./components/DecorativeMotifs";
 import "./App.css";
+import ResourceDetail from "./components/resources/ResourceDetail";
 
 // Feature pages
 import ChatbotFeature from "./pages/features/ChatbotFeature";
@@ -41,6 +42,7 @@ function App() {
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/case-studies" element={<CaseStudies />} />
         <Route path="/resources" element={<Resources />} />
+        <Route path="/resources/detail/:id" element={<ResourceDetail />} />
         <Route path="/features" element={<AllFeatures />} />
         <Route path="/contact" element={<Contact />} />
         
