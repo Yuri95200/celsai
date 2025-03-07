@@ -1,5 +1,6 @@
 
 import React, { useEffect } from "react";
+import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
@@ -25,6 +26,10 @@ const Index = () => {
 
   return (
     <div className="flex flex-col min-h-screen">
+      <Helmet>
+        <title>Celsai - Solution d'IA pour Service Client | Chatbot Intelligent et Automatisation</title>
+        <meta name="description" content="Transformez votre service client avec Celsai, la plateforme d'IA avancée qui intègre chatbot intelligent, base de connaissances et automatisation des résolutions." />
+      </Helmet>
       <Header />
       <main>
         <Hero />
