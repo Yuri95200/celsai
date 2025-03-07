@@ -61,7 +61,7 @@ const IntegrationsFeature = () => {
       icon={Network}
       title="Intégration avec vos outils"
       description="Connectez Celsai à tous vos systèmes existants pour une expérience unifiée."
-      imageSrc="/placeholder.svg"
+      imageSrc="/images/photo-1488590528505-98d2b5aba04b.jpg"
     >
       <section className="py-16">
         <Container>

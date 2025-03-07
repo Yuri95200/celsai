@@ -10,7 +10,7 @@ const KnowledgeBaseFeature = () => {
       icon={BookOpen}
       title="Base de connaissances dynamique"
       description="Convertissez votre documentation existante en intelligence actionnable pour votre service client."
-      imageSrc="/placeholder.svg"
+      imageSrc="/images/photo-1488590528505-98d2b5aba04b.jpg"
     >
       <section className="py-16">
         <Container>

@@ -42,13 +42,17 @@ const FeatureLayout = ({ icon: Icon, title, description, imageSrc, children }: F
                 <p className="text-xl text-gray-600">{description}</p>
                 
                 <div className="flex flex-wrap gap-4">
-                  <Button className="bg-celsai-500 hover:bg-celsai-600 text-white">
-                    Essai gratuit
-                  </Button>
-                  <Button variant="outline" className="border-gray-200">
-                    Demander une démo
-                    <ExternalLink className="ml-2 h-4 w-4" />
-                  </Button>
+                  <a href="https://celsai.com/demo" target="_blank" rel="noopener noreferrer">
+                    <Button className="bg-celsai-500 hover:bg-celsai-600 text-white">
+                      Essai gratuit
+                    </Button>
+                  </a>
+                  <Link to="/contact">
+                    <Button variant="outline" className="border-gray-200">
+                      Demander une démo
+                      <ExternalLink className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
                 </div>
               </div>
               
@@ -81,12 +85,16 @@ const FeatureLayout = ({ icon: Icon, title, description, imageSrc, children }: F
                 Rejoignez plus de 500 entreprises qui utilisent Celsai pour améliorer leur support client et réduire leurs coûts.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Button className="bg-celsai-500 hover:bg-celsai-600 text-white" size="lg">
-                  Commencer votre essai gratuit
-                </Button>
-                <Button variant="outline" className="border-gray-200" size="lg">
-                  Parler à un conseiller
-                </Button>
+                <a href="https://celsai.com/demo" target="_blank" rel="noopener noreferrer">
+                  <Button className="bg-celsai-500 hover:bg-celsai-600 text-white" size="lg">
+                    Commencer votre essai gratuit
+                  </Button>
+                </a>
+                <Link to="/contact">
+                  <Button variant="outline" className="border-gray-200" size="lg">
+                    Parler à un conseiller
+                  </Button>
+                </Link>
               </div>
             </div>
           </Container>

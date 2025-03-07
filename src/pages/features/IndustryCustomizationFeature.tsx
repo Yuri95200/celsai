@@ -38,7 +38,7 @@ const IndustryCustomizationFeature = () => {
       icon={Briefcase}
       title="Personnalisation par secteur"
       description="Des solutions IA adaptées aux spécificités de votre industrie et à votre marque."
-      imageSrc="/placeholder.svg"
+      imageSrc="/images/photo-1486312338219-ce68d2c6f44d.jpg"
     >
       <section className="py-16">
         <Container>
