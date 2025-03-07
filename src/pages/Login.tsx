@@ -24,26 +24,42 @@ const Login = () => {
     
     try {
       // Vérification des identifiants
-      // Ici, vous pourriez remplacer cette logique simplifiée par un appel réel à votre API 
-      // qui vérifie les identifiants contre votre base de données ou l'API de GoHighLevel
-      
       if (email.includes("@") && password.length > 0) {
-        // Simulation d'une connexion réussie
         toast({
-          title: "Connexion réussie",
-          description: "Vous allez être redirigé vers votre espace client.",
+          title: "Connexion en cours",
+          description: "Redirection vers votre espace client...",
           duration: 3000,
         });
         
-        // Dans un cas réel, vous pourriez avoir une étape ici qui:
-        // 1. Vérifie les identifiants contre l'API GoHighLevel
-        // 2. Récupère les informations spécifiques au client
-        // 3. Stocke un token d'authentification dans localStorage/sessionStorage
+        // Créer un formulaire temporaire pour envoyer les identifiants à GoHighLevel
+        const form = document.createElement('form');
+        form.method = 'POST';
+        form.action = 'https://app.schedmate.co/api/v1/auth/login';
+        form.style.display = 'none';
         
-        // Pour l'instant, on redirige simplement vers app.schedmate.co
-        setTimeout(() => {
-          window.location.href = "https://app.schedmate.co";
-        }, 1000);
+        // Ajouter les champs email et mot de passe
+        const emailInput = document.createElement('input');
+        emailInput.type = 'hidden';
+        emailInput.name = 'email';
+        emailInput.value = email;
+        form.appendChild(emailInput);
+        
+        const passwordInput = document.createElement('input');
+        passwordInput.type = 'hidden';
+        passwordInput.name = 'password';
+        passwordInput.value = password;
+        form.appendChild(passwordInput);
+        
+        // Ajouter un champ pour indiquer la redirection après connexion
+        const redirectInput = document.createElement('input');
+        redirectInput.type = 'hidden';
+        redirectInput.name = 'redirect';
+        redirectInput.value = 'dashboard';
+        form.appendChild(redirectInput);
+        
+        // Ajouter le formulaire au document et le soumettre
+        document.body.appendChild(form);
+        form.submit();
       } else {
         // Gestion améliorée des erreurs
         if (!email.includes("@")) {
