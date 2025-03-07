@@ -5,7 +5,6 @@ import About from "./pages/About";
 import TermsOfService from "./pages/TermsOfService";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
-import CaseStudies from "./pages/CaseStudies";
 import AllFeatures from "./pages/AllFeatures";
 import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollToTop";
@@ -38,7 +37,6 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/terms" element={<TermsOfService />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
-        <Route path="/case-studies" element={<CaseStudies />} />
         <Route path="/features" element={<AllFeatures />} />
         <Route path="/contact" element={<Contact />} />
         
