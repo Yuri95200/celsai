@@ -13,9 +13,10 @@ interface CategoryType {
 
 interface ResourcesHeroProps {
   categories: CategoryType[];
+  onCategoryChange: (categoryName: string) => void;
 }
 
-const ResourcesHero = ({ categories }: ResourcesHeroProps) => {
+const ResourcesHero = ({ categories, onCategoryChange }: ResourcesHeroProps) => {
   return (
     <section className="bg-gradient-to-b from-blue-50 to-white py-16">
       <Container>
@@ -48,6 +49,7 @@ const ResourcesHero = ({ categories }: ResourcesHeroProps) => {
               key={index}
               variant={category.active ? "default" : "outline"} 
               className={`rounded-full ${category.active ? 'bg-blue-600 hover:bg-blue-700 text-white' : 'border-gray-200'}`}
+              onClick={() => onCategoryChange(category.name)}
             >
               {category.name} <span className="ml-1 text-xs opacity-70">({category.count})</span>
             </Button>

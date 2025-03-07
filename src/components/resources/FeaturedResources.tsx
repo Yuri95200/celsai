@@ -8,6 +8,10 @@ interface FeaturedResourcesProps {
 }
 
 const FeaturedResources = ({ resources }: FeaturedResourcesProps) => {
+  if (resources.length === 0) {
+    return null; // Don't render the section if there are no resources to show
+  }
+  
   return (
     <section className="py-16">
       <Container>
