@@ -72,17 +72,19 @@ const Demo = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="flex-grow pt-32 pb-20">
-        <Container>
-          <div className="max-w-4xl mx-auto px-4 sm:px-6">
-            <div className="text-center mb-12">
+      <main className="flex-grow pt-32 pb-20 w-full">
+        <div className="w-full">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 mb-12">
+            <div className="text-center">
               <h1 className="text-3xl sm:text-4xl font-bold mb-6">Réservez votre démonstration</h1>
               <p className="text-base sm:text-lg text-gray-600 mb-8">
                 Découvrez comment Celsai peut transformer votre service client avec une démonstration personnalisée de notre plateforme.
               </p>
             </div>
-            
-            <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8" ref={iframeContainerRef}>
+          </div>
+          
+          <div className="w-full max-w-4xl mx-auto px-2 sm:px-4" ref={iframeContainerRef}>
+            <div className="bg-white rounded-xl shadow-lg p-2 sm:p-4">
               <iframe 
                 src="https://link.schedmate.co/widget/booking/T46yHwigNm8Fmx8Fzcdy" 
                 style={{ width: '100%', border: 'none', minHeight: '750px' }} 
@@ -90,8 +92,10 @@ const Demo = () => {
                 title="Calendrier de réservation"
               />
             </div>
-            
-            <div className="mt-12 bg-celsai-50 rounded-xl p-4 sm:p-8 text-center">
+          </div>
+          
+          <Container className="mt-12">
+            <div className="bg-celsai-50 rounded-xl p-4 sm:p-8 text-center max-w-4xl mx-auto">
               <h2 className="text-xl sm:text-2xl font-bold mb-4">Pourquoi choisir une démo personnalisée ?</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mt-8">
                 <div className="bg-white p-4 sm:p-6 rounded-lg shadow-sm">
@@ -117,8 +121,8 @@ const Demo = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </Container>
+          </Container>
+        </div>
       </main>
       <Footer />
     </div>
