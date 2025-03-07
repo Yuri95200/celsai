@@ -50,6 +50,14 @@ const PricingFAQ = () => {
     }
   ];
 
+  const scrollToContact = (e) => {
+    e.preventDefault();
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="pricing-faq" className="py-20 bg-white">
       <Container>
@@ -81,7 +89,7 @@ const PricingFAQ = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <a href="https://celsai.com/demo">
+          <a href="#contact" onClick={scrollToContact}>
             <Button className="bg-blue-600 hover:bg-blue-700 text-white">
               D'autres questions ? Contactez-nous
               <ArrowRight className="ml-2 h-5 w-5" />
