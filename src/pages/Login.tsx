@@ -6,28 +6,23 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { useNavigate } from "react-router-dom";
 import { ArrowRight, Lock, Mail, AlertCircle } from "lucide-react";
+
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const navigate = useNavigate();
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setError("");
     try {
-      // Simulation d'une vérification d'identifiants
-      // En production, vous connecteriez cela à votre système de gestion des utilisateurs
-
-      // Exemple de redirection basée sur l'email de l'utilisateur
-      // Dans un cas réel, vous pourriez avoir une base de données ou une API pour récupérer l'URL 
+      // Vérification simple que l'email et le mot de passe ne sont pas vides
       if (email.includes("@") && password.length > 0) {
-        // Déterminer l'URL GoHighLevel en fonction de l'email
-        // Ceci est un exemple - en production, vous auriez une logique plus robuste
-        const domain = email.split("@")[1].split(".")[0];
-        // Rediriger vers le compte GoHighLevel en marque blanche
-        window.location.href = `https://${domain}.gohighlevel.com`;
+        // Rediriger vers app.schedmate.co
+        window.location.href = "https://app.schedmate.co";
       } else {
         setError("Identifiants invalides. Veuillez réessayer.");
       }
@@ -38,6 +33,7 @@ const Login = () => {
       setLoading(false);
     }
   };
+
   return <div className="flex flex-col min-h-screen">
       <Header />
       
@@ -110,4 +106,5 @@ const Login = () => {
       <Footer />
     </div>;
 };
+
 export default Login;
