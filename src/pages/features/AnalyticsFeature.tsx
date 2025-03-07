@@ -10,7 +10,7 @@ const AnalyticsFeature = () => {
       icon={BarChart3}
       title="Analyses et tableaux de bord"
       description="Exploitez les données de votre support client pour prendre des décisions éclairées."
-      imageSrc="/images/photo-1518770660439-4636190af475.jpg"
+      imageSrc="analytics-dashboard.jpg"
     >
       <section className="py-16">
         <Container>

@@ -33,7 +33,7 @@ const AutomatedResolutionFeature = () => {
       icon={Wrench}
       title="Résolution automatisée"
       description="Résolvez rapidement les problèmes techniques grâce à notre diagnostic IA et nos guides étape par étape."
-      imageSrc="/images/photo-1461749280684-dccba630e2f6.jpg"
+      imageSrc="automated-resolution.jpg"
     >
       <section className="py-16">
         <Container>
