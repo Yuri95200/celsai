@@ -1,5 +1,5 @@
 
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import TermsOfService from "./pages/TermsOfService";
@@ -41,9 +41,6 @@ function App() {
         <Route path="/case-studies" element={<CaseStudies />} />
         <Route path="/features" element={<AllFeatures />} />
         <Route path="/contact" element={<Contact />} />
-        
-        {/* Redirect login route to schedmate */}
-        <Route path="/login" element={<Navigate to="https://app.schedmate.co" replace />} />
         
         {/* Feature routes */}
         <Route path="/features/chatbot" element={<ChatbotFeature />} />
