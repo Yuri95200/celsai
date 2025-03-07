@@ -13,6 +13,11 @@ const Footer = () => {
     navigate("/");
     window.scrollTo(0, 0);
   };
+
+  const navigateToLogin = e => {
+    e.preventDefault();
+    navigate("/login");
+  };
   
   return <footer className="bg-gray-50 pt-16 pb-8">
       <Container>
@@ -100,9 +105,9 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <Link to="/login" className="text-gray-600 hover:text-celsai-500 transition-colors font-medium">
+                <a href="/login" className="text-gray-600 hover:text-celsai-500 transition-colors font-medium" onClick={navigateToLogin}>
                   Connexion
-                </Link>
+                </a>
               </li>
             </ul>
           </div>

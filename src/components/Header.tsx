@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Container } from "@/components/ui/container";
 import { cn } from "@/lib/utils";
@@ -97,6 +96,11 @@ const Header = () => {
     setIsMobileMenuOpen(false);
   };
 
+  const navigateToLogin = () => {
+    navigate("/login");
+    setIsMobileMenuOpen(false);
+  };
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (isMegaMenuOpen && !event.target.closest('.mega-menu-container')) {
@@ -186,7 +190,11 @@ const Header = () => {
           </nav>
           
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" className="border-gray-200 hover:border-celsai-400 hover:bg-celsai-50">
+            <Button 
+              variant="outline" 
+              className="border-gray-200 hover:border-celsai-400 hover:bg-celsai-50"
+              onClick={navigateToLogin}
+            >
               Se connecter
             </Button>
             <a href="https://celsai.com/demo">
@@ -273,7 +281,11 @@ const Header = () => {
                 Contact
               </Link>
               <div className="pt-4 space-y-3">
-                <Button variant="outline" className="w-full border-gray-200">
+                <Button 
+                  variant="outline" 
+                  className="w-full border-gray-200"
+                  onClick={navigateToLogin}
+                >
                   Se connecter
                 </Button>
                 <a href="https://celsai.com/demo">
