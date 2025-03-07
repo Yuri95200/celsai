@@ -59,9 +59,15 @@ const FeatureLayout = ({ icon: Icon, title, description, imageSrc, children }: F
               <div className="md:w-1/2">
                 {imageSrc ? (
                   <img 
-                    src={imageSrc} 
+                    src={`/images/${imageSrc}`} 
                     alt={`${title} illustration`} 
-                    className="rounded-xl shadow-lg w-full object-cover"
+                    className="rounded-xl shadow-lg w-full object-cover h-auto max-h-[400px]"
+                    onError={(e) => {
+                      console.error(`Failed to load image: ${imageSrc}`);
+                      const target = e.target as HTMLImageElement;
+                      target.onerror = null;
+                      target.src = '/placeholder.svg';
+                    }}
                   />
                 ) : (
                   <div className="bg-gray-200 rounded-xl h-80 w-full flex items-center justify-center">
