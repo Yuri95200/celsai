@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
@@ -13,6 +12,11 @@ const Footer = () => {
     e.preventDefault();
     navigate("/");
     window.scrollTo(0, 0);
+  };
+  
+  const handleLoginClick = (e) => {
+    e.preventDefault();
+    window.location.href = "https://app.schedmate.co";
   };
   
   return <footer className="bg-gray-50 pt-16 pb-8">
@@ -124,12 +128,21 @@ const Footer = () => {
         <div className="py-8 border-t border-b border-gray-200 mb-8">
           <div className="text-center">
             <h3 className="font-semibold text-lg mb-4">Prêt à révolutionner votre support client ?</h3>
-            <a href="https://celsai.com/demo">
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white">
-                Commencer votre essai gratuit
+            <div className="flex flex-wrap justify-center gap-4">
+              <a href="https://celsai.com/demo">
+                <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+                  Commencer votre essai gratuit
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </a>
+              <Button 
+                onClick={handleLoginClick}
+                className="bg-celsai-500 hover:bg-celsai-600 text-white"
+              >
+                Se connecter
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-            </a>
+            </div>
           </div>
         </div>
         
