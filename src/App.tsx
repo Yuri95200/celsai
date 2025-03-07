@@ -22,6 +22,13 @@ import AnalyticsFeature from "./pages/features/AnalyticsFeature";
 import IndustryCustomizationFeature from "./pages/features/IndustryCustomizationFeature";
 import IntegrationsFeature from "./pages/features/IntegrationsFeature";
 
+// Article pages
+import GuideIA2024 from "./articles/GuideIA2024";
+import WebinaireSupportOmnicanal from "./articles/WebinaireSupportOmnicanal";
+import LivreBlancROI from "./articles/LivreBlancROI";
+import MetriquesServiceClient from "./articles/MetriquesServiceClient";
+import EtudeCasBanqueDigitale from "./articles/EtudeCasBanqueDigitale";
+
 function App() {
   return (
     <Router>
@@ -45,6 +52,13 @@ function App() {
         <Route path="/features/analytics" element={<AnalyticsFeature />} />
         <Route path="/features/industry-customization" element={<IndustryCustomizationFeature />} />
         <Route path="/features/integrations" element={<IntegrationsFeature />} />
+        
+        {/* Article routes */}
+        <Route path="/resources/guide-ia-2024" element={<GuideIA2024 />} />
+        <Route path="/resources/webinaire-support-omnicanal" element={<WebinaireSupportOmnicanal />} />
+        <Route path="/resources/livre-blanc-roi" element={<LivreBlancROI />} />
+        <Route path="/resources/metriques-service-client" element={<MetriquesServiceClient />} />
+        <Route path="/resources/etude-cas-banque-digitale" element={<EtudeCasBanqueDigitale />} />
         
         <Route path="*" element={<NotFound />} />
       </Routes>

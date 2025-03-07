@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
@@ -31,7 +30,8 @@ const Resources = () => {
       description: "Découvrez les dernières innovations en matière d'IA conversationnelle et comment elles transforment l'expérience client.",
       downloadable: true,
       date: "15 juin 2024",
-      readTime: "12 min"
+      readTime: "12 min",
+      link: "/resources/guide-ia-2024"
     },
     {
       id: 2,
@@ -41,7 +41,8 @@ const Resources = () => {
       description: "Regardez notre webinaire pour apprendre à créer une expérience client fluide sur tous vos canaux grâce à l'IA.",
       downloadable: false,
       date: "28 mai 2024",
-      readTime: "45 min"
+      readTime: "45 min",
+      link: "/resources/webinaire-support-omnicanal"
     },
     {
       id: 3,
@@ -51,7 +52,8 @@ const Resources = () => {
       description: "Étude détaillée sur le retour sur investissement réel des solutions d'IA dans le service client.",
       downloadable: true,
       date: "10 avril 2024",
-      readTime: "25 min"
+      readTime: "25 min",
+      link: "/resources/livre-blanc-roi"
     }
   ];
   
@@ -62,7 +64,8 @@ const Resources = () => {
       type: "Guide",
       imageUrl: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
       date: "3 juin 2024",
-      readTime: "8 min"
+      readTime: "8 min",
+      link: "/resources/metriques-service-client"
     },
     {
       id: 5,
@@ -70,7 +73,8 @@ const Resources = () => {
       type: "Étude de cas",
       imageUrl: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
       date: "25 mai 2024",
-      readTime: "15 min"
+      readTime: "15 min",
+      link: "/resources/etude-cas-banque-digitale"
     },
     {
       id: 6,
@@ -179,27 +183,31 @@ const Resources = () => {
             <div className="grid md:grid-cols-3 gap-8">
               {featuredResources.map((resource) => (
                 <div key={resource.id} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all group">
-                  <div className="relative h-48 overflow-hidden">
-                    <img 
-                      src={resource.imageUrl}
-                      alt={resource.title}
-                      className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute top-4 left-4">
-                      <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
-                        {resource.type}
-                      </span>
+                  <Link to={resource.link} className="block">
+                    <div className="relative h-48 overflow-hidden">
+                      <img 
+                        src={resource.imageUrl}
+                        alt={resource.title}
+                        className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute top-4 left-4">
+                        <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                          {resource.type}
+                        </span>
+                      </div>
+                      <div className="absolute top-4 right-4">
+                        <Button variant="ghost" size="sm" className="bg-white/80 backdrop-blur-sm hover:bg-white text-blue-700 rounded-full w-8 h-8 p-0">
+                          <Bookmark className="h-4 w-4" />
+                        </Button>
+                      </div>
                     </div>
-                    <div className="absolute top-4 right-4">
-                      <Button variant="ghost" size="sm" className="bg-white/80 backdrop-blur-sm hover:bg-white text-blue-700 rounded-full w-8 h-8 p-0">
-                        <Bookmark className="h-4 w-4" />
-                      </Button>
-                    </div>
-                  </div>
+                  </Link>
                   <div className="p-6">
-                    <h3 className="font-bold text-lg mb-2 group-hover:text-blue-600 transition-colors">
-                      {resource.title}
-                    </h3>
+                    <Link to={resource.link}>
+                      <h3 className="font-bold text-lg mb-2 group-hover:text-blue-600 transition-colors">
+                        {resource.title}
+                      </h3>
+                    </Link>
                     <p className="text-gray-600 text-sm mb-4">
                       {resource.description}
                     </p>
@@ -214,14 +222,18 @@ const Resources = () => {
                     </div>
                     <div className="mt-4">
                       {resource.downloadable ? (
-                        <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
-                          <Download className="mr-2 h-4 w-4" />
-                          Télécharger
+                        <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white" asChild>
+                          <Link to={resource.link}>
+                            <Download className="mr-2 h-4 w-4" />
+                            Télécharger
+                          </Link>
                         </Button>
                       ) : (
-                        <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
-                          <PlayCircle className="mr-2 h-4 w-4" />
-                          Regarder
+                        <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white" asChild>
+                          <Link to={resource.link}>
+                            <PlayCircle className="mr-2 h-4 w-4" />
+                            Regarder
+                          </Link>
                         </Button>
                       )}
                     </div>
@@ -238,22 +250,26 @@ const Resources = () => {
             <div className="grid md:grid-cols-3 gap-6">
               {resources.map((resource) => (
                 <div key={resource.id} className="bg-white rounded-lg shadow overflow-hidden hover:shadow-md transition-all group">
-                  <div className="relative h-40 overflow-hidden">
-                    <img 
-                      src={resource.imageUrl}
-                      alt={resource.title}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute top-3 left-3">
-                      <span className="inline-block px-2 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
-                        {resource.type}
-                      </span>
+                  <Link to={resource.link || "#"} className="block">
+                    <div className="relative h-40 overflow-hidden">
+                      <img 
+                        src={resource.imageUrl}
+                        alt={resource.title}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute top-3 left-3">
+                        <span className="inline-block px-2 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                          {resource.type}
+                        </span>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                   <div className="p-5">
-                    <h3 className="font-bold mb-3 group-hover:text-blue-600 transition-colors">
-                      {resource.title}
-                    </h3>
+                    <Link to={resource.link || "#"}>
+                      <h3 className="font-bold mb-3 group-hover:text-blue-600 transition-colors">
+                        {resource.title}
+                      </h3>
+                    </Link>
                     <div className="flex justify-between items-center text-sm text-gray-500 mb-3">
                       <div className="flex items-center">
                         <Clock className="h-3 w-3 mr-1" />
@@ -263,9 +279,11 @@ const Resources = () => {
                         {resource.date}
                       </div>
                     </div>
-                    <Button variant="ghost" className="w-full justify-between hover:text-blue-600">
-                      Lire la suite
-                      <ChevronRight className="h-5 w-5" />
+                    <Button variant="ghost" className="w-full justify-between hover:text-blue-600" asChild>
+                      <Link to={resource.link || "#"}>
+                        Lire la suite
+                        <ChevronRight className="h-5 w-5" />
+                      </Link>
                     </Button>
                   </div>
                 </div>
