@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
@@ -12,11 +13,6 @@ const Footer = () => {
     e.preventDefault();
     navigate("/");
     window.scrollTo(0, 0);
-  };
-
-  const navigateToLogin = e => {
-    e.preventDefault();
-    navigate("/login");
   };
   
   return <footer className="bg-gray-50 pt-16 pb-8">
@@ -102,11 +98,6 @@ const Footer = () => {
               <li>
                 <a href="#" className="text-gray-400 hover:text-celsai-500 transition-colors">
                   Partenaires
-                </a>
-              </li>
-              <li>
-                <a href="/login" className="text-gray-600 hover:text-celsai-500 transition-colors font-medium" onClick={navigateToLogin}>
-                  Connexion
                 </a>
               </li>
             </ul>

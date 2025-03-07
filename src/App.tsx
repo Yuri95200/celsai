@@ -8,7 +8,6 @@ import NotFound from "./pages/NotFound";
 import CaseStudies from "./pages/CaseStudies";
 import AllFeatures from "./pages/AllFeatures";
 import Contact from "./pages/Contact";
-import Login from "./pages/Login";
 import ScrollToTop from "./components/ScrollToTop";
 import DecorativeMotifs from "./components/DecorativeMotifs";
 import "./App.css";
@@ -42,7 +41,6 @@ function App() {
         <Route path="/case-studies" element={<CaseStudies />} />
         <Route path="/features" element={<AllFeatures />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/login" element={<Login />} />
         
         {/* Feature routes */}
         <Route path="/features/chatbot" element={<ChatbotFeature />} />
