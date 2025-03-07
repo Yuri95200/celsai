@@ -1,5 +1,6 @@
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import TermsOfService from "./pages/TermsOfService";
@@ -31,6 +32,10 @@ import EtudeCasBanqueDigitale from "./articles/EtudeCasBanqueDigitale";
 function App() {
   return (
     <Router>
+      <Helmet>
+        <title>Celsai - Solution d'IA pour Service Client | Chatbot et Automatisation</title>
+        <meta name="description" content="Celsai transforme votre service client avec des solutions d'IA avancées: chatbot intelligent, base de connaissances et automatisation des résolutions." />
+      </Helmet>
       <ScrollToTop />
       <DecorativeMotifs />
       <Routes>

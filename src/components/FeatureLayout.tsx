@@ -1,5 +1,6 @@
 
 import React from "react";
+import { Helmet } from "react-helmet";
 import Header from "./Header";
 import Footer from "./Footer";
 import { Container } from "./ui/container";
@@ -13,11 +14,28 @@ interface FeatureLayoutProps {
   description: string;
   imageSrc?: string;
   children: React.ReactNode;
+  seoTitle?: string;
+  seoDescription?: string;
 }
 
-const FeatureLayout = ({ icon: Icon, title, description, imageSrc, children }: FeatureLayoutProps) => {
+const FeatureLayout = ({ 
+  icon: Icon, 
+  title, 
+  description, 
+  imageSrc, 
+  children,
+  seoTitle = "", 
+  seoDescription = ""
+}: FeatureLayoutProps) => {
+  const pageTitle = seoTitle || `${title} | Celsai - Solution d'IA pour Service Client`;
+  const pageDescription = seoDescription || `Découvrez comment Celsai ${title.toLowerCase()} peut transformer votre service client. Solutions d'IA personnalisées pour votre entreprise.`;
+  
   return (
     <div className="flex flex-col min-h-screen">
+      <Helmet>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+      </Helmet>
       <Header />
       
       <main className="flex-grow pt-24">
@@ -35,7 +53,7 @@ const FeatureLayout = ({ icon: Icon, title, description, imageSrc, children }: F
                 </div>
                 
                 <div className="inline-block p-3 bg-celsai-50 rounded-2xl">
-                  <Icon className="h-8 w-8 text-celsai-500" />
+                  <img src="/lovable-uploads/2f8829b5-202e-464f-bb75-0799bd8e0a3c.png" alt="Celsai" className="h-8 w-8" />
                 </div>
                 
                 <h1 className="text-4xl md:text-5xl font-bold">{title}</h1>
@@ -71,7 +89,7 @@ const FeatureLayout = ({ icon: Icon, title, description, imageSrc, children }: F
                   />
                 ) : (
                   <div className="bg-gray-200 rounded-xl h-80 w-full flex items-center justify-center">
-                    <Icon className="h-16 w-16 text-gray-400" />
+                    <img src="/lovable-uploads/2f8829b5-202e-464f-bb75-0799bd8e0a3c.png" alt="Celsai" className="h-16 w-16" />
                   </div>
                 )}
               </div>

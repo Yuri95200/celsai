@@ -1,5 +1,6 @@
 
 import React, { useEffect, useRef } from "react";
+import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Container } from "@/components/ui/container";
@@ -71,6 +72,10 @@ const Demo = () => {
 
   return (
     <div className="flex flex-col min-h-screen">
+      <Helmet>
+        <title>Réservez une démo gratuite | Celsai - Solution d'IA pour Service Client</title>
+        <meta name="description" content="Réservez une démonstration personnalisée de Celsai et découvrez comment notre IA peut transformer votre service client. Consultation gratuite de 30 minutes." />
+      </Helmet>
       <Header />
       <main className="flex-grow pt-32 pb-20 w-full">
         <div className="w-full">
@@ -89,7 +94,7 @@ const Demo = () => {
                 src="https://link.schedmate.co/widget/booking/T46yHwigNm8Fmx8Fzcdy" 
                 style={{ width: '100%', border: 'none', minHeight: '750px' }} 
                 id="T46yHwigNm8Fmx8Fzcdy_1741345593056"
-                title="Calendrier de réservation"
+                title="Calendrier de réservation de démonstration Celsai"
               />
             </div>
           </div>
@@ -99,22 +104,22 @@ const Demo = () => {
               <h2 className="text-xl sm:text-2xl font-bold mb-4">Pourquoi choisir une démo personnalisée ?</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mt-8">
                 <div className="bg-white p-4 sm:p-6 rounded-lg shadow-sm">
-                  <div className="h-12 w-12 bg-celsai-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-celsai-600 font-bold">1</span>
+                  <div className="flex items-center justify-center mx-auto mb-4">
+                    <img src="/lovable-uploads/2f8829b5-202e-464f-bb75-0799bd8e0a3c.png" alt="Celsai" className="h-12 w-12" />
                   </div>
                   <h3 className="font-medium text-lg mb-2">Solutions sur mesure</h3>
                   <p className="text-sm sm:text-base text-gray-600">Découvrez comment notre technologie s'adapte spécifiquement à votre secteur d'activité.</p>
                 </div>
                 <div className="bg-white p-4 sm:p-6 rounded-lg shadow-sm">
-                  <div className="h-12 w-12 bg-celsai-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-celsai-600 font-bold">2</span>
+                  <div className="flex items-center justify-center mx-auto mb-4">
+                    <img src="/lovable-uploads/2f8829b5-202e-464f-bb75-0799bd8e0a3c.png" alt="Celsai" className="h-12 w-12" />
                   </div>
                   <h3 className="font-medium text-lg mb-2">Questions spécifiques</h3>
                   <p className="text-sm sm:text-base text-gray-600">Posez toutes vos questions à un expert qui comprend les défis de votre entreprise.</p>
                 </div>
                 <div className="bg-white p-4 sm:p-6 rounded-lg shadow-sm">
-                  <div className="h-12 w-12 bg-celsai-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-celsai-600 font-bold">3</span>
+                  <div className="flex items-center justify-center mx-auto mb-4">
+                    <img src="/lovable-uploads/2f8829b5-202e-464f-bb75-0799bd8e0a3c.png" alt="Celsai" className="h-12 w-12" />
                   </div>
                   <h3 className="font-medium text-lg mb-2">Évaluation précise</h3>
                   <p className="text-sm sm:text-base text-gray-600">Obtenez une estimation claire des bénéfices et du ROI pour votre organisation.</p>

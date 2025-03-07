@@ -1,5 +1,6 @@
 
 import React from "react";
+import { Helmet } from "react-helmet";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ContactSection from "../components/Contact";
@@ -8,6 +9,10 @@ import { Container } from "@/components/ui/container";
 const Contact = () => {
   return (
     <div className="min-h-screen flex flex-col">
+      <Helmet>
+        <title>Contactez notre équipe | Celsai - Solution d'IA pour Service Client</title>
+        <meta name="description" content="Contactez l'équipe Celsai pour en savoir plus sur nos solutions d'IA pour service client. Demandez une démo ou un devis personnalisé." />
+      </Helmet>
       <Header />
       <main className="flex-grow pt-24">
         <div className="py-12 bg-gradient-to-b from-blue-50 to-white">
