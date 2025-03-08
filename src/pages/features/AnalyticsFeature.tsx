@@ -19,11 +19,11 @@ const AnalyticsFeature = () => {
         <meta property="og:title" content="Analyses et Reporting IA du Service Client | Insights Avancés | Celsai" />
         <meta property="og:description" content="Obtenez des insights puissants sur vos performances de service client grâce à nos tableaux de bord d'analyse IA." />
         <meta property="og:url" content="https://www.celsai.com/features/analytics" />
-        <meta property="og:image" content="/lovable-uploads/7a259d38-8248-4be9-857d-6ed9c88e32e9.png" />
+        <meta property="og:image" content="/lovable-uploads/347c9f82-c150-40e3-b715-2ebafd93b53a.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Analyses et Reporting IA du Service Client | Insights Avancés | Celsai" />
         <meta name="twitter:description" content="Obtenez des insights puissants sur vos performances de service client grâce à nos tableaux de bord d'analyse IA." />
-        <meta name="twitter:image" content="/lovable-uploads/7a259d38-8248-4be9-857d-6ed9c88e32e9.png" />
+        <meta name="twitter:image" content="/lovable-uploads/347c9f82-c150-40e3-b715-2ebafd93b53a.png" />
         <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
@@ -38,7 +38,7 @@ const AnalyticsFeature = () => {
               "priceCurrency": "EUR"
             },
             "featureList": "Tableaux de bord personnalisables, Analyse sémantique, Détection proactive des problèmes, Suivi des performances",
-            "screenshot": "/lovable-uploads/7a259d38-8248-4be9-857d-6ed9c88e32e9.png",
+            "screenshot": "/lovable-uploads/347c9f82-c150-40e3-b715-2ebafd93b53a.png",
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.8",
@@ -51,7 +51,7 @@ const AnalyticsFeature = () => {
         icon={BarChart3}
         title="Analyses et tableaux de bord"
         description="Exploitez les données de votre support client pour prendre des décisions éclairées."
-        imageSrc="/images/photo-1518770660439-4636190af475.jpg"
+        imageSrc="/lovable-uploads/347c9f82-c150-40e3-b715-2ebafd93b53a.png"
       >
         <section className="py-16">
           <Container>

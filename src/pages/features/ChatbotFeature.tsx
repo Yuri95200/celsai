@@ -47,14 +47,14 @@ const ChatbotFeature = () => {
         <meta property="og:title" content="Chatbot IA Avancé pour Service Client | Celsai" />
         <meta property="og:description" content="Offrez des réponses instantanées et personnalisées à vos clients 24h/24 et 7j/7 grâce à notre chatbot IA avancé." />
         <meta property="og:url" content="https://www.celsai.com/features/chatbot" />
-        <meta property="og:image" content="/lovable-uploads/7a259d38-8248-4be9-857d-6ed9c88e32e9.png" />
+        <meta property="og:image" content="/lovable-uploads/6e85d8f3-6593-4677-92c8-b79f9c26f170.png" />
         <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
             "@type": "Product",
             "name": "Chatbot IA Celsai",
             "description": "Chatbot intelligent multicanal disponible 24/7",
-            "image": "/lovable-uploads/7a259d38-8248-4be9-857d-6ed9c88e32e9.png",
+            "image": "/lovable-uploads/6e85d8f3-6593-4677-92c8-b79f9c26f170.png",
             "brand": {
               "@type": "Brand",
               "name": "Celsai"
@@ -71,7 +71,7 @@ const ChatbotFeature = () => {
         icon={Bot}
         title="Chatbot intelligent multicanal"
         description="Offrez une assistance client automatisée et intelligente sur tous vos canaux digitaux."
-        imageSrc="/images/photo-1486312338219-ce68d2c6f44d.jpg"
+        imageSrc="/lovable-uploads/6e85d8f3-6593-4677-92c8-b79f9c26f170.png"
       >
         <section className="py-16">
           <Container>
