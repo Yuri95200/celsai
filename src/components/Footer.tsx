@@ -1,10 +1,10 @@
-
 import React from "react";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Facebook, Twitter, Instagram, Linkedin, ArrowRight, Mail } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
+import ChatbotWidget from "./ChatbotWidget";
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -15,7 +15,8 @@ const Footer = () => {
     window.scrollTo(0, 0);
   };
   
-  return <footer className="bg-gray-50 pt-16 pb-8">
+  return (
+    <footer className="bg-gray-50 pt-16 pb-8">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div className="lg:col-span-1">
@@ -145,7 +146,10 @@ const Footer = () => {
           </div>
         </div>
       </Container>
-    </footer>;
+      
+      <ChatbotWidget />
+    </footer>
+  );
 };
 
 export default Footer;

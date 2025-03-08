@@ -120,3 +120,15 @@
   overflow: hidden;
 }
 
+/* Style pour le widget de chatbot */
+.chat-widget-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+/* Assurez-vous que le widget est au-dessus de tous les autres éléments */
+div[id^="chat-widget"] {
+  z-index: 9999 !important;
+}
