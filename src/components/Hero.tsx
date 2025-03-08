@@ -3,7 +3,6 @@ import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, PlayCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const Hero = () => {
   return <section className="pt-32 pb-20 overflow-hidden">
       <Container>
@@ -67,17 +66,17 @@ const Hero = () => {
                   </div>
                   <div className="flex justify-end mb-4">
                     <div className="bg-gray-100 rounded-2xl rounded-tr-none py-2 px-4 max-w-[80%]">
-                      <p className="text-sm">J'ai un problème avec ma facture du mois dernier.</p>
+                      <p className="text-sm">J’ai un problème avec le paiement de ma commande.</p>
                     </div>
                   </div>
                   <div className="flex mb-4">
                     <div className="bg-blue-100 text-blue-800 rounded-2xl rounded-tl-none py-2 px-4 max-w-[80%]">
-                      <p className="text-sm">Je suis désolé pour ce désagrément. Pouvez-vous me préciser quel est le problème avec votre facture?</p>
+                      <p className="text-sm">Je suis désolé pour ce désagrément. Pouvez-vous me préciser quel est le problème exactement ?</p>
                     </div>
                   </div>
                   <div className="flex justify-end mb-4">
                     <div className="bg-gray-100 rounded-2xl rounded-tr-none py-2 px-4 max-w-[80%]">
-                      <p className="text-sm">Je pense avoir été facturé deux fois pour le même service.</p>
+                      <p className="text-sm">Oui, ma carte a été refusée, mais il n’y a pas de problème avec mon compte bancaire.</p>
                     </div>
                   </div>
                   <div className="flex mb-4">
@@ -103,5 +102,4 @@ const Hero = () => {
       </Container>
     </section>;
 };
-
 export default Hero;
