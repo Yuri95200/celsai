@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
@@ -68,8 +67,8 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <Features />
         <ChatbotDemo />
+        <Features />
         <Pricing />
         <Testimonials />
         <PricingFAQ />
