@@ -168,56 +168,13 @@ const ChatbotDemo = () => {
           <h2 className="mt-4 font-bold text-gradient">
             Essayez notre chatbot intelligent
           </h2>
-          <p className="mt-4 text-lg text-gray-600">
-            Interagissez avec notre assistant virtuel pour découvrir comment Celsai peut transformer votre service client. Posez des questions sur les remboursements, la facturation, les livraisons ou signalez un problème.
-          </p>
+          <p className="mt-4 text-lg text-gray-600">Interagissez avec notre assistant virtuel en bas à droite de votre écran pour découvrir comment Celsai peut transformer votre service client. Posez toutes les questions qui vous passent par la tête concernant nos services.</p>
         </div>
         
         <div className="max-w-2xl mx-auto">
-          <div className="border border-gray-200 rounded-xl overflow-hidden shadow-lg">
-            <div className="bg-celsai-500 text-white p-4 flex items-center">
-              <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center mr-3">
-                <span className="text-white font-bold">C</span>
-              </div>
-              <div>
-                <div className="font-medium">Assistant Celsai</div>
-                <div className="text-xs text-celsai-100">En ligne</div>
-              </div>
-            </div>
-            
-            <div className="bg-gray-50 h-96 overflow-y-auto p-4">
-              <div className="space-y-4">
-                {messages.map(message => <div key={message.id} className={`flex ${message.sender === "user" ? "justify-end" : "justify-start"}`}>
-                    <div className={`max-w-[80%] px-4 py-3 rounded-2xl ${message.sender === "user" ? "bg-celsai-500 text-white rounded-tr-none" : "bg-white border border-gray-200 rounded-tl-none"}`}>
-                      {message.isTyping ? <div className="flex space-x-1">
-                          <div className="w-2 h-2 rounded-full bg-current animate-pulse"></div>
-                          <div className="w-2 h-2 rounded-full bg-current animate-pulse delay-75"></div>
-                          <div className="w-2 h-2 rounded-full bg-current animate-pulse delay-150"></div>
-                        </div> : <p>{message.text}</p>}
-                    </div>
-                  </div>)}
-                <div ref={messagesEndRef} />
-              </div>
-            </div>
-            
-            <div className="bg-white p-4 border-t border-gray-200">
-              <form onSubmit={handleSubmit} className="flex items-center">
-                <input type="text" value={input} onChange={e => setInput(e.target.value)} placeholder="Tapez votre message..." className="flex-1 border border-gray-300 rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-celsai-500 focus:border-transparent" disabled={isTyping} />
-                <Button type="submit" className="ml-2 bg-celsai-500 hover:bg-celsai-600 text-white rounded-full p-2 h-10 w-10" disabled={isTyping || !input.trim()}>
-                  <Send className="h-5 w-5" />
-                </Button>
-              </form>
-            </div>
-          </div>
           
-          <div className="mt-8 bg-celsai-50 rounded-lg p-5 border border-celsai-100">
-            <h4 className="font-medium mb-2 text-celsai-800">Suggestions d'interaction :</h4>
-            <div className="flex flex-wrap gap-2">
-              {chatScenarios.map((scenario, index) => <button key={index} className="bg-white border border-celsai-200 hover:bg-celsai-100 rounded-full px-3 py-1 text-sm text-celsai-700 transition-colors" onClick={() => startScenario(scenario.keyword)}>
-                  {scenario.keyword}
-                </button>)}
-            </div>
-          </div>
+          
+          
         </div>
       </Container>
     </section>;
