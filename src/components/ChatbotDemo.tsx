@@ -169,10 +169,7 @@ const ChatbotDemo = () => {
             Démonstration Interactive
           </span>
           <h2 className="mt-4 font-bold text-4xl text-gradient mb-6">Essayez notre Chatbot Intelligent</h2>
-          <p className="text-lg text-gray-600 mb-8">
-            Expérimentez par vous-même comment Celsai transforme le service client avec notre assistant virtuel. 
-            Posez vos questions ou essayez notre démo interactive ci-dessous.
-          </p>
+          <p className="text-lg text-gray-600 mb-8">Expérimentez par vous-même comment Celsai transforme le service client avec notre assistant virtuel. Posez toutes les questions qui vous passent par la tête concernant nos services.</p>
           
           <div className="flex items-center justify-center mb-12">
             <Bot className="h-10 w-10 text-blue-500 mr-4" />
