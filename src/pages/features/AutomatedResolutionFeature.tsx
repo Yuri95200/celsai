@@ -40,14 +40,14 @@ const AutomatedResolutionFeature = () => {
         <meta property="og:title" content="Résolution Automatique des Problèmes Clients | Celsai" />
         <meta property="og:description" content="Résolvez rapidement les problèmes techniques de vos clients grâce à notre diagnostic IA et nos guides étape par étape." />
         <meta property="og:url" content="https://www.celsai.com/features/automated-resolution" />
-        <meta property="og:image" content="/lovable-uploads/07a540ef-a749-4f1e-bc94-c4593d80e42d.png" />
+        <meta property="og:image" content="/lovable-uploads/347c9f82-c150-40e3-b715-2ebafd93b53a.png" />
         <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
             "@type": "Product",
             "name": "Résolution Automatisée Celsai",
             "description": "Solution de diagnostic et résolution automatique des problèmes clients",
-            "image": "/lovable-uploads/07a540ef-a749-4f1e-bc94-c4593d80e42d.png",
+            "image": "/lovable-uploads/347c9f82-c150-40e3-b715-2ebafd93b53a.png",
             "brand": {
               "@type": "Brand",
               "name": "Celsai"
@@ -64,7 +64,7 @@ const AutomatedResolutionFeature = () => {
         icon={Wrench}
         title="Résolution automatisée"
         description="Résolvez rapidement les problèmes techniques grâce à notre diagnostic IA et nos guides étape par étape."
-        imageSrc="/lovable-uploads/07a540ef-a749-4f1e-bc94-c4593d80e42d.png"
+        imageSrc="/lovable-uploads/347c9f82-c150-40e3-b715-2ebafd93b53a.png"
       >
         <section className="py-16">
           <Container>

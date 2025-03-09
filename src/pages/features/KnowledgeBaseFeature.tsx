@@ -17,14 +17,14 @@ const KnowledgeBaseFeature = () => {
         <meta property="og:title" content="Base de Connaissances IA Dynamique | Celsai" />
         <meta property="og:description" content="Notre base de connaissances IA centralise toutes vos informations pour des réponses précises et cohérentes." />
         <meta property="og:url" content="https://www.celsai.com/features/knowledge-base" />
-        <meta property="og:image" content="/lovable-uploads/f021b258-0bd9-4f95-84fe-3fe19435d2bd.png" />
+        <meta property="og:image" content="/lovable-uploads/055c1e16-f0f4-4267-a6a5-69c10c20a6ee.png" />
         <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
             "@type": "Product",
             "name": "Base de Connaissances IA Celsai",
             "description": "Base de connaissances dynamique qui s'adapte et évolue automatiquement",
-            "image": "/lovable-uploads/f021b258-0bd9-4f95-84fe-3fe19435d2bd.png",
+            "image": "/lovable-uploads/055c1e16-f0f4-4267-a6a5-69c10c20a6ee.png",
             "brand": {
               "@type": "Brand",
               "name": "Celsai"
@@ -41,7 +41,7 @@ const KnowledgeBaseFeature = () => {
         icon={BookOpen}
         title="Base de connaissances dynamique"
         description="Convertissez votre documentation existante en intelligence actionnable pour votre service client."
-        imageSrc="/lovable-uploads/f021b258-0bd9-4f95-84fe-3fe19435d2bd.png"
+        imageSrc="/lovable-uploads/055c1e16-f0f4-4267-a6a5-69c10c20a6ee.png"
       >
         <section className="py-16">
           <Container>

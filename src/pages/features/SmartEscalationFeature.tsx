@@ -10,7 +10,7 @@ const SmartEscalationFeature = () => {
       icon={ArrowUpRight}
       title="Escalade intelligente"
       description="Transfert fluide vers vos agents humains uniquement quand c'est vraiment nécessaire."
-      imageSrc="/lovable-uploads/10c59f8a-96b3-41b2-8644-bd976d6c2186.png"
+      imageSrc="/lovable-uploads/7a259d38-8248-4be9-857d-6ed9c88e32e9.png"
     >
       <section className="py-16">
         <Container>
