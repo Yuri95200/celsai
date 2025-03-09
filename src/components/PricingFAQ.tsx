@@ -18,7 +18,7 @@ const PricingFAQ = () => {
     },
     {
       question: "Comment l'assistant intelligent assure-t-il la précision de ses réponses ?",
-      answer: "L'assistant assure la précision de ses réponses en s'appuyant sur une base de connaissances alimentée par des informations préalablement transmises par l'utilisateur, telles que des pages de sites web, des blogs, etc."
+      answer: "L'assistant assure la précision de ses réponses en s'appuyant sur une base de connaissances alimentée par des informations préalablement transmises par l'utilisateur, telles que des pages de sites web, des blogs, et une FAQ régulièrement mise à jour"
     },
     {
       question: "Puis-je changer de forfait après m'être inscrit ?",
