@@ -165,9 +165,7 @@ const ChatbotDemo = () => {
   return <section id="demo" className="py-24 bg-gradient-to-b from-white to-blue-50">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-4">
-            Démonstration Interactive
-          </span>
+          <span className="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-4">Démonstration interactive</span>
           <h2 className="mt-4 font-bold text-4xl text-gradient mb-6">Essayez notre chatbot intelligent</h2>
           <p className="text-lg text-gray-600 mb-8">Expérimentez par vous-même comment Celsai transforme le service client avec notre assistant virtuel. Posez toutes les questions qui vous passent par la tête concernant nos services.</p>
           
