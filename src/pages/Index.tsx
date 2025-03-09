@@ -68,8 +68,8 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <ChatbotDemo />
         <Features />
+        <ChatbotDemo />
         <Pricing />
         <Testimonials />
         <PricingFAQ />
