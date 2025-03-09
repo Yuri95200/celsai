@@ -13,8 +13,12 @@ import {
 const PricingFAQ = () => {
   const faqItems = [
     {
-      question: "Combien de temps dure la période d'essai gratuit ?",
-      answer: "La période d'essai gratuit est de 14 jours pour tous nos forfaits, avec accès complet à toutes les fonctionnalités. Aucune carte de crédit n'est requise pour démarrer votre essai."
+      question: "Qu'est-ce que Celsai ?",
+      answer: "Celsai est une solution IA avancée qui automatise le service client avec un chatbot intelligent, offrant des réponses instantanées et un support 24/7."
+    },
+    {
+      question: "Comment l'assistant intelligent assure-t-il la précision de ses réponses ?",
+      answer: "L'assistant assure la précision de ses réponses en s'appuyant sur une base de connaissances alimentée par des informations préalablement transmises par l'utilisateur, telles que des pages de sites web, des blogs, etc."
     },
     {
       question: "Puis-je changer de forfait après m'être inscrit ?",
