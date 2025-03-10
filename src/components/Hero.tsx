@@ -76,7 +76,7 @@ const Hero = () => {
                   </div>
                   <div className="flex justify-end mb-4">
                     <div className="bg-gray-100 rounded-2xl rounded-tr-none py-2 px-4 max-w-[80%]">
-                      <p className="text-sm">Oui, ma carte a été refusée, mais il n’y a pas de problème avec mon compte bancaire.</p>
+                      <p className="text-sm">Oui, ma carte a été refusée, alors que je n'ai aucun problème avec mon compte bancaire.</p>
                     </div>
                   </div>
                   <div className="flex mb-4">
