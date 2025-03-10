@@ -41,80 +41,80 @@ function SEOWrapper() {
   // Ajuster en fonction de la page
   if (location.pathname === "/") {
     title = "Celsai - Solution d'IA pour Service Client | Chatbot Intelligent et Automatisation";
-    description = "Transformez votre service client avec Celsai, la plateforme d'IA avancée qui intègre chatbot intelligent, base de connaissances et automatisation des résolutions. Réduisez vos coûts et améliorez la satisfaction client.";
+    description = "Transformez votre service client avec Celsai, la plateforme d'IA avancée qui automatise jusqu'à 70% de vos interactions et améliore la satisfaction client de 60%. Essai gratuit disponible.";
     keywords = "service client IA, chatbot intelligent, automation service client, expérience client, satisfaction client, support IA, Celsai";
   } else if (location.pathname.includes("/features/chatbot")) {
     title = "Chatbot IA Avancé pour Service Client | Disponible 24/7 | Celsai";
     description = "Offrez des réponses instantanées et personnalisées à vos clients 24h/24 et 7j/7 grâce à notre chatbot IA avancé. Multilingue, conversationnel et sécurisé selon les normes RGPD.";
-    keywords = "chatbot IA, assistant virtuel, réponses automatisées, service client 24/7, support multilingue, Celsai";
+    keywords = "chatbot IA, assistant virtuel, réponses automatisées, service client 24/7, support multilingue, réduction coûts support, Celsai";
   } else if (location.pathname.includes("/features/knowledge-base")) {
     title = "Base de Connaissances IA Dynamique | Assistance Intelligente | Celsai";
-    description = "Notre base de connaissances IA centralise toutes vos informations pour des réponses précises et cohérentes. Synchronisation automatique avec vos documents et apprentissage continu.";
-    keywords = "base de connaissances IA, gestion des connaissances, documentation automatisée, apprentissage machine, recherche sémantique, Celsai";
+    description = "Notre base de connaissances IA centralise et optimise toutes vos informations pour des réponses précises et cohérentes. Synchronisation automatique avec vos documents et apprentissage continu.";
+    keywords = "base de connaissances IA, gestion des connaissances, documentation automatisée, apprentissage machine, recherche sémantique, intelligence artificielle, Celsai";
   } else if (location.pathname.includes("/features/automated-resolution")) {
     title = "Résolution Automatique des Problèmes Clients | IA Diagnostic | Celsai";
-    description = "Résolvez rapidement les problèmes techniques de vos clients grâce à notre diagnostic IA et nos guides étape par étape. Réduction des tickets jusqu'à 60-80% sans intervention humaine.";
-    keywords = "résolution automatique, diagnostic IA, self-service, guides interactifs, réduction tickets support, Celsai";
+    description = "Résolvez rapidement les problèmes techniques de vos clients grâce à notre diagnostic IA et nos guides étape par étape. Réduction des tickets jusqu'à 80% sans intervention humaine.";
+    keywords = "résolution automatique, diagnostic IA, self-service, guides interactifs, réduction tickets support, automatisation service client, Celsai";
   } else if (location.pathname.includes("/features/smart-escalation")) {
     title = "Escalade Intelligente des Demandes Client | Routage IA | Celsai";
-    description = "Notre système d'escalade intelligente analyse la complexité des demandes et les dirige vers les agents les plus qualifiés, optimisant l'efficacité de votre service client.";
-    keywords = "escalade intelligente, routage demandes, transfert contextualisé, priorisation tickets, workflow support client, Celsai";
+    description = "Notre système d'escalade intelligente analyse la complexité des demandes et les dirige vers les agents les plus qualifiés, optimisant l'efficacité de votre service client de 40%.";
+    keywords = "escalade intelligente, routage demandes, transfert contextualisé, priorisation tickets, workflow support client, IA service client, Celsai";
   } else if (location.pathname.includes("/features/analytics")) {
     title = "Analyses et Reporting IA du Service Client | Insights Avancés | Celsai";
-    description = "Obtenez des insights puissants sur vos performances de service client grâce à nos tableaux de bord d'analyse IA. Visualisez tendances, sentiments et opportunités d'amélioration.";
-    keywords = "analyses service client, dashboard IA, reporting performances, sentiment client, optimisation support, métriques service client, Celsai";
+    description = "Obtenez des insights puissants sur vos performances de service client grâce à nos tableaux de bord d'analyse IA. Visualisez tendances, sentiments et opportunités d'amélioration en temps réel.";
+    keywords = "analyses service client, dashboard IA, reporting performances, sentiment client, optimisation support, métriques service client, intelligence artificielle, Celsai";
   } else if (location.pathname.includes("/features/industry-customization")) {
     title = "IA Service Client Personnalisée par Secteur | Solutions Spécifiques | Celsai";
-    description = "Des solutions d'IA de service client sur mesure pour chaque secteur d'activité : finance, e-commerce, santé, télécoms, tourisme et services professionnels.";
-    keywords = "IA service client sectorielles, solutions spécifiques industrie, personnalisation par secteur, IA spécialisée, Celsai";
+    description = "Des solutions d'IA de service client sur mesure pour chaque secteur d'activité : finance, e-commerce, santé, télécoms, tourisme et services professionnels. Adaptées à vos besoins spécifiques.";
+    keywords = "IA service client sectorielles, solutions spécifiques industrie, personnalisation par secteur, IA spécialisée, chatbot personnalisé, support client sur mesure, Celsai";
   } else if (location.pathname.includes("/features/integrations")) {
     title = "Intégrations Service Client IA | Connectez vos Outils Existants | Celsai";
-    description = "Intégrez facilement Celsai à vos outils existants - CRM, helpdesk, chat, e-commerce et plus. API flexible et connecteurs prêts à l'emploi pour une implémentation rapide.";
-    keywords = "intégrations IA, connecteurs service client, API service client, intégration CRM, synchronisation helpdesk, Celsai";
+    description = "Intégrez facilement Celsai à vos outils existants - CRM, helpdesk, chat, e-commerce et plus. API flexible et connecteurs prêts à l'emploi pour une implémentation en moins de 48h.";
+    keywords = "intégrations IA, connecteurs service client, API service client, intégration CRM, synchronisation helpdesk, chatbot intégré, Celsai";
   } else if (location.pathname.includes("/about")) {
     title = "À Propos de Celsai | Notre Mission et Notre Équipe d'IA";
-    description = "Découvrez l'histoire de Celsai, notre mission de transformation du service client par l'IA et l'équipe d'experts qui développe nos solutions innovantes.";
-    keywords = "équipe Celsai, histoire entreprise IA, mission service client, valeurs IA, experts intelligence artificielle, Celsai";
+    description = "Découvrez l'histoire de Celsai, notre mission de transformation du service client par l'IA et l'équipe d'experts qui développe nos solutions innovantes depuis 2019.";
+    keywords = "équipe Celsai, histoire entreprise IA, mission service client, valeurs IA, experts intelligence artificielle, innovation support client, Celsai";
   } else if (location.pathname.includes("/contact")) {
     title = "Contactez Celsai | Experts en IA pour Service Client";
-    description = "Entrez en contact avec notre équipe d'experts pour discuter de vos besoins en matière de service client IA et découvrir comment Celsai peut transformer votre expérience client.";
-    keywords = "contact Celsai, service client IA, assistance IA, démo service client, support technique IA, Celsai";
+    description = "Entrez en contact avec notre équipe d'experts pour discuter de vos besoins en matière de service client IA et découvrir comment Celsai peut transformer votre expérience client. Réponse sous 24h.";
+    keywords = "contact Celsai, service client IA, assistance IA, démo service client, support technique IA, consultation gratuite, Celsai";
   } else if (location.pathname.includes("/demo")) {
     title = "Réservez une Démo de Celsai | Découvrez notre IA Service Client";
-    description = "Réservez une démonstration personnalisée pour découvrir comment Celsai peut transformer votre service client grâce à notre plateforme d'IA intégrée et nos solutions sur mesure.";
-    keywords = "démonstration IA, démo service client, présentation chatbot, essai plateforme IA, rendez-vous consultation, Celsai";
+    description = "Réservez une démonstration personnalisée gratuite pour découvrir comment Celsai peut transformer votre service client grâce à notre plateforme d'IA qui automatise jusqu'à 70% des interactions.";
+    keywords = "démonstration IA, démo service client, présentation chatbot, essai plateforme IA, rendez-vous consultation, service client automatisé, Celsai";
   } else if (location.pathname.includes("/terms")) {
     title = "Conditions d'Utilisation | Celsai Solutions d'IA";
     description = "Consultez nos conditions d'utilisation détaillées pour comprendre les termes qui régissent l'utilisation de la plateforme Celsai et nos services d'IA pour le service client.";
-    keywords = "conditions utilisation Celsai, termes service IA, obligations légales, droits utilisateur, politique service, Celsai";
+    keywords = "conditions utilisation Celsai, termes service IA, obligations légales, droits utilisateur, politique service, RGPD, Celsai";
   } else if (location.pathname.includes("/privacy")) {
     title = "Politique de Confidentialité | Protection des Données | Celsai";
-    description = "Notre politique de confidentialité détaille comment nous collectons, utilisons et protégeons vos données personnelles conformément au RGPD et autres réglementations.";
-    keywords = "confidentialité données, RGPD IA, protection informations, sécurité données client, politique privée, Celsai";
+    description = "Notre politique de confidentialité détaille comment nous collectons, utilisons et protégeons vos données personnelles conformément au RGPD et autres réglementations. Sécurité garantie.";
+    keywords = "confidentialité données, RGPD IA, protection informations, sécurité données client, politique privée, traitement données, Celsai";
   } else if (location.pathname.includes("/features")) {
     title = "Fonctionnalités IA Service Client | Suite Complète | Celsai";
-    description = "Découvrez notre suite complète de fonctionnalités d'IA pour le service client : chatbot intelligent, base de connaissances, résolution automatisée et analyses avancées.";
-    keywords = "fonctionnalités service client IA, capacités chatbot, outils support IA, solutions automation, plateforme assistance, Celsai";
+    description = "Découvrez notre suite complète de fonctionnalités d'IA pour le service client : chatbot intelligent, base de connaissances, résolution automatisée et analyses avancées. Solution tout-en-un.";
+    keywords = "fonctionnalités service client IA, capacités chatbot, outils support IA, solutions automation, plateforme assistance, intelligence artificielle, Celsai";
   } else if (location.pathname.includes("/articles/guide-ia-2024")) {
     title = "Guide IA Service Client 2024 | Tendances et Stratégies | Celsai";
-    description = "Découvrez comment l'IA révolutionne le service client en 2024 avec notre guide complet des technologies, stratégies et tendances émergentes pour optimiser votre support.";
-    keywords = "guide IA 2024, tendances service client, innovations support, stratégies IA, futur service client, Celsai";
+    description = "Découvrez comment l'IA révolutionne le service client en 2024 avec notre guide complet des technologies, stratégies et tendances émergentes pour optimiser votre support. Téléchargement gratuit.";
+    keywords = "guide IA 2024, tendances service client, innovations support, stratégies IA, futur service client, technologies émergentes, Celsai";
   } else if (location.pathname.includes("/articles/webinaire-support-omnicanal")) {
     title = "Webinaire Support Omnicanal IA | Stratégies Unifiées | Celsai";
-    description = "Regardez notre webinaire sur les stratégies de support omnicanal propulsées par l'IA pour offrir une expérience client cohérente sur tous les canaux de communication.";
-    keywords = "webinaire omnicanal, support multicanal, stratégie expérience client, communication unifiée, IA conversationnelle, Celsai";
+    description = "Regardez notre webinaire gratuit sur les stratégies de support omnicanal propulsées par l'IA pour offrir une expérience client cohérente sur tous les canaux de communication.";
+    keywords = "webinaire omnicanal, support multicanal, stratégie expérience client, communication unifiée, IA conversationnelle, service client intégré, Celsai";
   } else if (location.pathname.includes("/articles/livre-blanc-roi")) {
     title = "Livre Blanc ROI de l'IA en Service Client | Étude Complète | Celsai";
     description = "Notre livre blanc analyse le retour sur investissement de l'IA dans le service client avec des données concrètes, études de cas et méthodes de calcul pour justifier votre investissement.";
-    keywords = "ROI IA service client, retour investissement support, bénéfices chatbot, rentabilité automation, réduction coûts support, Celsai";
+    keywords = "ROI IA service client, retour investissement support, bénéfices chatbot, rentabilité automation, réduction coûts support, analyse financière IA, Celsai";
   } else if (location.pathname.includes("/articles/metriques-service-client")) {
     title = "7 Métriques Essentielles Service Client | KPIs Support | Celsai";
-    description = "Guide complet des 7 métriques essentielles pour évaluer l'efficacité de votre service client : satisfaction, résolution, temps de traitement et plus.";
-    keywords = "métriques service client, KPI support, indicateurs performance, CSAT, NPS, taux résolution, temps traitement, Celsai";
+    description = "Guide complet des 7 métriques essentielles pour évaluer l'efficacité de votre service client : satisfaction, résolution, temps de traitement et plus. Optimisez vos performances.";
+    keywords = "métriques service client, KPI support, indicateurs performance, CSAT, NPS, taux résolution, temps traitement, optimisation service client, Celsai";
   } else if (location.pathname.includes("/articles/etude-cas-banque-digitale")) {
     title = "Étude de Cas: Transformation IA du Support Bancaire | Celsai";
-    description = "Découvrez comment une banque digitale a transformé son service client grâce à l'IA de Celsai, réduisant les coûts de 45% et augmentant la satisfaction client de 60%.";
-    keywords = "étude cas IA bancaire, success story support, transformation digitale banque, réduction coûts service client, automation bancaire, Celsai";
+    description = "Découvrez comment une banque digitale a transformé son service client grâce à l'IA de Celsai, réduisant les coûts de 45% et augmentant la satisfaction client de 60% en seulement 3 mois.";
+    keywords = "étude cas IA bancaire, success story support, transformation digitale banque, réduction coûts service client, automation bancaire, chatbot finance, Celsai";
   }
   
   return (
@@ -126,8 +126,36 @@ function SEOWrapper() {
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:type" content="website" />
+      <meta property="og:image" content="/lovable-uploads/7a259d38-8248-4be9-857d-6ed9c88e32e9.png" />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content="/lovable-uploads/7a259d38-8248-4be9-857d-6ed9c88e32e9.png" />
+      <script type="application/ld+json">{`
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Celsai",
+          "url": "${canonicalUrl}",
+          "logo": "/lovable-uploads/7a259d38-8248-4be9-857d-6ed9c88e32e9.png",
+          "description": "${description}",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "24 rue du Gouverneur Général Eboue",
+            "addressLocality": "Issy-les-Moulineaux",
+            "postalCode": "92130",
+            "addressCountry": "FR"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+33 6 05 53 35 46",
+            "contactType": "customer service",
+            "email": "contact@celsai.com",
+            "availableLanguage": ["French", "English"]
+          }
+        }
+      `}</script>
     </Helmet>
   );
 }

@@ -16,6 +16,8 @@ interface FeatureLayoutProps {
   children: React.ReactNode;
   seoTitle?: string;
   seoDescription?: string;
+  seoKeywords?: string;
+  canonicalUrl?: string;
 }
 
 const FeatureLayout = ({ 
@@ -25,16 +27,31 @@ const FeatureLayout = ({
   imageSrc, 
   children,
   seoTitle = "", 
-  seoDescription = ""
+  seoDescription = "",
+  seoKeywords = "",
+  canonicalUrl = ""
 }: FeatureLayoutProps) => {
   const pageTitle = seoTitle || `${title} | Celsai - Solution d'IA pour Service Client`;
   const pageDescription = seoDescription || `Découvrez comment Celsai ${title.toLowerCase()} peut transformer votre service client. Solutions d'IA personnalisées pour votre entreprise.`;
+  const pageKeywords = seoKeywords || `${title.toLowerCase()}, service client IA, automatisation support, Celsai, intelligence artificielle`;
+  const pageUrl = canonicalUrl || `https://celsai.com/features/${title.toLowerCase().replace(/\s+/g, '-')}`;
   
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
+        <meta name="keywords" content={pageKeywords} />
+        <link rel="canonical" href={pageUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={imageSrc || "/lovable-uploads/2f8829b5-202e-464f-bb75-0799bd8e0a3c.png"} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content={imageSrc || "/lovable-uploads/2f8829b5-202e-464f-bb75-0799bd8e0a3c.png"} />
       </Helmet>
       <Header />
       
