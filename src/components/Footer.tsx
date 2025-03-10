@@ -1,18 +1,89 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Facebook, Twitter, Instagram, Linkedin, ArrowRight, Mail } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import ChatbotWidget from "./ChatbotWidget";
+import { useToast } from "@/hooks/use-toast";
+import emailjs from 'emailjs-com';
 
 const Footer = () => {
   const navigate = useNavigate();
+  const { toast } = useToast();
+  const [email, setEmail] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   
   const handleLogoClick = e => {
     e.preventDefault();
     navigate("/");
     window.scrollTo(0, 0);
+  };
+  
+  const handleNewsletterSubmit = async (e) => {
+    e.preventDefault();
+    
+    if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
+      toast({
+        title: "Erreur",
+        description: "Veuillez entrer une adresse email valide",
+        variant: "destructive"
+      });
+      return;
+    }
+    
+    setIsLoading(true);
+    
+    try {
+      // Vérifiez si EmailJS est configuré correctement
+      const emailjsPublicKey = "YOUR_PUBLIC_KEY";
+      const emailjsServiceId = "YOUR_SERVICE_ID";
+      const emailjsTemplateId = "YOUR_TEMPLATE_ID";
+      
+      if (
+        emailjsPublicKey !== "YOUR_PUBLIC_KEY" &&
+        emailjsServiceId !== "YOUR_SERVICE_ID" &&
+        emailjsTemplateId !== "YOUR_TEMPLATE_ID"
+      ) {
+        // Configuration EmailJS
+        const templateParams = {
+          from_email: email,
+          to_email: "contact@celsai.com",
+          subject: "Nouvelle inscription à la newsletter Celsai",
+          message: `Nouvelle inscription à la newsletter avec l'adresse email: ${email}`
+        };
+
+        // Envoi de l'email via EmailJS
+        await emailjs.send(
+          emailjsServiceId,
+          emailjsTemplateId,
+          templateParams
+        );
+      } else {
+        // Simuler l'envoi si EmailJS n'est pas configuré
+        console.log("Simulation d'envoi d'email pour newsletter à contact@celsai.com:", {
+          subject: "Nouvelle inscription à la newsletter Celsai",
+          body: `Nouvelle inscription à la newsletter avec l'adresse email: ${email}`
+        });
+        await new Promise(resolve => setTimeout(resolve, 1000));
+      }
+      
+      toast({
+        title: "Inscription réussie !",
+        description: "Merci de vous être inscrit à notre newsletter."
+      });
+      
+      setEmail("");
+    } catch (error) {
+      console.error("Erreur lors de l'inscription à la newsletter:", error);
+      toast({
+        title: "Erreur",
+        description: "Une erreur est survenue. Veuillez réessayer.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
   
   return (
@@ -104,16 +175,34 @@ const Footer = () => {
             <p className="text-gray-600 mb-4">
               Abonnez-vous à notre newsletter pour recevoir nos dernières actualités et conseils en matière de service client.
             </p>
-            <div className="flex gap-2 mb-4">
-              <Input type="email" placeholder="Votre email" className="h-10" />
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white h-10 w-10 p-0">
-                <ArrowRight size={18} />
+            <form onSubmit={handleNewsletterSubmit} className="space-y-4">
+              <div className="flex gap-2">
+                <Input 
+                  type="email" 
+                  placeholder="Votre email" 
+                  className="h-10"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+                <Button 
+                  type="submit" 
+                  className="bg-blue-600 hover:bg-blue-700 text-white h-10 w-10 p-0"
+                  disabled={isLoading}
+                >
+                  {isLoading ? "..." : <ArrowRight size={18} />}
+                </Button>
+              </div>
+              <Button 
+                type="submit" 
+                variant="outline" 
+                className="border-gray-200 hover:border-blue-400 hover:bg-blue-50 w-full"
+                disabled={isLoading}
+              >
+                <Mail className="mr-2 h-4 w-4" />
+                {isLoading ? "Inscription en cours..." : "S'inscrire à la newsletter"}
               </Button>
-            </div>
-            <Button variant="outline" className="border-gray-200 hover:border-blue-400 hover:bg-blue-50 w-full">
-              <Mail className="mr-2 h-4 w-4" />
-              S'inscrire à la newsletter
-            </Button>
+            </form>
           </div>
         </div>
         

@@ -1,9 +1,11 @@
-
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from 'emailjs-com';
+
+emailjs.init("YOUR_PUBLIC_KEY");
 
 const ContactForm = () => {
   const { toast } = useToast();
@@ -14,6 +16,23 @@ const ContactForm = () => {
     message: ""
   });
   const [isLoading, setIsLoading] = useState(false);
+  const [emailConfigured, setEmailConfigured] = useState(false);
+
+  useEffect(() => {
+    const emailjsPublicKey = "YOUR_PUBLIC_KEY";
+    const emailjsServiceId = "YOUR_SERVICE_ID";
+    const emailjsTemplateId = "YOUR_TEMPLATE_ID";
+    
+    if (
+      emailjsPublicKey !== "YOUR_PUBLIC_KEY" &&
+      emailjsServiceId !== "YOUR_SERVICE_ID" &&
+      emailjsTemplateId !== "YOUR_TEMPLATE_ID"
+    ) {
+      setEmailConfigured(true);
+    } else {
+      console.warn("EmailJS n'est pas correctement configuré. L'envoi d'emails sera simulé.");
+    }
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -24,17 +43,40 @@ const ContactForm = () => {
     e.preventDefault();
     setIsLoading(true);
     
-    // Simuler l'envoi du formulaire
     try {
-      // En réalité, vous ajouteriez ici votre logique d'envoi du formulaire
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      if (emailConfigured) {
+        const templateParams = {
+          from_name: formData.name,
+          from_email: formData.email,
+          from_company: formData.company,
+          message: formData.message,
+          to_email: "contact@celsai.com",
+          subject: `Demande de contact de ${formData.name} - ${formData.company}`
+        };
+
+        await emailjs.send(
+          "YOUR_SERVICE_ID",
+          "YOUR_TEMPLATE_ID",
+          templateParams
+        );
+      } else {
+        console.log("Simulation d'envoi d'email à contact@celsai.com:", {
+          subject: `Demande de contact de ${formData.name} - ${formData.company}`,
+          body: `
+            Nom: ${formData.name}
+            Email: ${formData.email}
+            Entreprise: ${formData.company}
+            Message: ${formData.message}
+          `
+        });
+        await new Promise(resolve => setTimeout(resolve, 1500));
+      }
       
       toast({
         title: "Message envoyé",
         description: "Nous vous recontacterons dans les plus brefs délais.",
       });
       
-      // Réinitialiser le formulaire
       setFormData({
         name: "",
         email: "",
@@ -42,6 +84,7 @@ const ContactForm = () => {
         message: ""
       });
     } catch (error) {
+      console.error("Erreur lors de l'envoi de l'email:", error);
       toast({
         title: "Erreur",
         description: "Une erreur est survenue. Veuillez réessayer.",
